@@ -33,3 +33,9 @@ Route::get('dashboard/surat/domisili', function () {
     return view('dashboard.surat.domisili');
 });
 
+
+Route::get('dashboard', function () {
+    return view('dashboard.home');
+});
+
+
