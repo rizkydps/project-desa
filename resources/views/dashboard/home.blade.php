@@ -201,6 +201,7 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
+                                <th>Tanggal</th>
                                 <th>Nama</th>
                                 <th>Perihal</th>
                                 <th>Isi Pengaduan</th>
@@ -220,6 +221,7 @@
                         <tbody>
                             <tr>
                                 <td>1</td>
+                                <td>10 agustus 2024</td>
                                 <td>Budiman</td>
                                 <td>Maling</td>
                                 <td>Ada Maling</td>

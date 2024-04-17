@@ -30,7 +30,7 @@ Route::get('/', function () {
 });
 
 Route::get('dashboard/surat/domisili', function () {
-    return view('dashboard.surat.domisili');
+    return view('dashboard.surat.KeteranganDomisili');
 });
 
 
@@ -38,4 +38,9 @@ Route::get('dashboard', function () {
     return view('dashboard.home');
 });
 
+
+
+Route::get('formulir', function () {
+    return view('landing.formulir');
+});
 
