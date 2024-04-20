@@ -13,9 +13,44 @@ return new class extends Migration
     {
         Schema::create('surats', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('whatsapp');
+            $table->string('nama')->nullable();
             $table->string('nik')->nullable();
-            $table->string('nik');
+            $table->string('tempat_lahir');
+            
+            $table->string('pekerjaan')->nullable();
+            $table->string('alamat')->nullable();
+            $table->string('jenis_kelamin')->nullable();
+            $table->string('warganegara')->nullable();
+            $table->string('status_pernikahan')->nullable();
+            $table->string('agama')->nullable();
+            $table->string('no_kk')->nullable();
+            $table->string('tujuan_surat')->nullable();
+            $table->string('alasan_pindah')->nullable();
+            
+
+            $table->integer('umur')->nullable();
+            $table->integer('pengikut_pindah')->nullable();
+            $table->integer('berat_badan')->nullable();
+            $table->integer('panjang_badan')->nullable();
+
+
+            
+
+            $table->date('tanggal_lahir')->nullable();
+            $table->date('tanggal_meninggal')->nullable();
+            $table->date('tanggal')->nullable();
+            $table->date('tahun_mulai')->nullable();
+            $table->date('hari_lahir')->nullable();
+            $table->date('jam_waktu')->nullable();
+
+            
+            $table->string('foto_ktp')->nullable();        
+            $table->string('foto_kk')->nullable();
+            $table->string('foto_akta')->nullable();
+            $table->string('foto_barang')->nullable();
+            $table->string('foto_bukti')->nullable();
+            $table->string('foto_pengantar')->nullable();
             $table->string('status')->default('0');
             $table->timestamps();
         });

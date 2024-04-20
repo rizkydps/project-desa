@@ -31,3 +31,4 @@
 	<script src="{{ asset ('landing/js/gsap-animation.js') }}"></script>
 	<!-- Scripts JS -->
 	<script src="{{ asset ('landing/js/scripts.js') }}"></script>
+	<script></script>

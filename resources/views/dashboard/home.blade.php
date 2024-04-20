@@ -200,11 +200,13 @@
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>ID</th>
+                                <th>No</th>
                                 <th>Tanggal</th>
                                 <th>Nama</th>
                                 <th>Perihal</th>
                                 <th>Isi Pengaduan</th>
+                                <th>Waktu Aduan</th>
+                                <th>Action</th>
                                 
                             </tr>
                         </thead>
@@ -219,15 +221,20 @@
                             </tr>
                         </tfoot> -->
                         <tbody>
+                            {{--  @foreach ($pengaduan as $data)  --}}
                             <tr>
-                                <td>1</td>
-                                <td>10 agustus 2024</td>
-                                <td>Budiman</td>
-                                <td>Maling</td>
-                                <td>Ada Maling</td>
+                                {{--  <td>{{ $data->id }}</td>
+                                <td>{{ $data->name }}</td>
+                                <td>{{ $data->perihal }}</td>
+                                <td>{{ $data->aduan }}</td>
+                                <td>{{ $data->created_at->format('d-m-Y H:i:s') }}</td>
+                                <td>
+                                    <a href="https://api.whatsapp.com/send?phone={{ $data->whatsapp }}&text=Halo%20{{ $data->name }},%20saya%20ingin%20menindaklanjuti%20pengaduan%20Anda%20tentang%20{{ $data->perihal }}">Hubungi via WhatsApp</a>
+                                </td>  --}}
+                                
                                 
                             </tr>
-                           
+                            {{--  @endforeach  --}}
                             
                         </tbody>
                     </table>

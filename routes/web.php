@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PengaduanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,13 @@ Route::get('/', function () {
     return view('landing');
 });
 
+Route::get('/', [PengaduanController::class, 'index']);
+Route::post('/', [PengaduanController::class, 'store']);
+Route::post('/dashboard', [PengaduanController::class, 'view'])->name('dashboard');
+
+
+
+
 Route::get('dashboard/surat/domisili', function () {
     return view('dashboard.surat.KeteranganDomisili');
 });
@@ -43,4 +51,3 @@ Route::get('dashboard', function () {
 Route::get('formulir', function () {
     return view('landing.formulir');
 });
-

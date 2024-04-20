@@ -9,24 +9,25 @@
         </div>
         <div class="appointment_box">
             <h4 class="text-center mb-3">Buat Aduan</h4>
-            <form>
+            <form method="POST">
+                @csrf
                 <div class="row">
                     <div class="col-md-6">
                         <input type="text" class="form-control" placeholder="Nama Lengkap*" name="name" required>
                     </div>
                     <div class="col-md-6">
-                        <input type="tel" class="form-control" placeholder="Nomer Hp" name="phone" required>
+                        <input type="tel" class="form-control" placeholder="Nomer Hp" name="whatsapp" required>
                     </div>
                     <div class="col-md-12">
-                        <input type="tel" class="form-control" placeholder="Perihal" name="phone" required>
+                        <input type="tel" class="form-control" placeholder="Perihal" name="perihal" required>
                     </div>
                     
                     
                     <div class="col-md-12">
-                        <textarea name="message" cols="40" rows="10" class="form-control" placeholder="Tulis Aduan...." required></textarea>
+                        <textarea name="message" cols="40" rows="10" class="form-control" name="aduan" placeholder="Tulis Aduan...." required></textarea>
                     </div>
                     <div class="col-md-12">
-                        <button class="pbmit-btn">
+                        <button class="pbmit-btn" type="submit">
                             <span class="pbmit-button-text">Kirim</span>
                             <span class="pbmit-button-icon-wrapper">
                                 <span class="pbmit-button-icon">
