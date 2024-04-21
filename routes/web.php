@@ -30,9 +30,8 @@ Route::get('/', function () {
     return view('landing');
 });
 
-Route::get('/', [PengaduanController::class, 'index']);
-Route::post('/', [PengaduanController::class, 'store']);
-Route::post('/dashboard', [PengaduanController::class, 'view'])->name('dashboard');
+Route::post('/submit-form', [PengaduanController::class, 'submitForm'])->name('submit.form');
+Route::get('/dashboard', [PengaduanController::class, 'dashboard'])->name('dashboard');
 
 
 

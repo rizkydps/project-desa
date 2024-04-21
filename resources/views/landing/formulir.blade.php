@@ -81,7 +81,7 @@
 									<input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir" required>
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Tanggal Lahir" name="tanggal_lahir" required>
+									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir" required>
 								</div>
 								{{--  <div class="col-md-6">
 									<input class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" type="date" name="date-123">
@@ -173,7 +173,7 @@
 									<input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir" required>
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Tanggal Lahir" name="tanggal_lahir" required>
+									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir" required>
 								</div>
 								{{--  <div class="col-md-6">
 									<input class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" type="date" name="date-123">
@@ -270,7 +270,7 @@
 									<input type="text" class="form-control" placeholder="Tempat Lahir Suami" name="tempat_lahir" required>
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Tanggal Lahir" name="tanggal_lahir" required>
+									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir" required>
 								</div>
 								<div class="col-md-6">
 									<select class="form-select form-control" aria-label="Default select example">
@@ -295,7 +295,7 @@
 									<input type="text" class="form-control" placeholder="Tempat Lahir Istri" name="tempat_lahir" required>
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Tanggal Istri" name="tanggal_lahir" required>
+									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir" required>
 								</div>
 								<div class="col-md-6">
 									<select class="form-select form-control" aria-label="Default select example">
@@ -359,7 +359,7 @@
 									<input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir" required>
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Tanggal Lahir" name="tanggal_lahir" required>
+									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir" required>
 								</div>
 								{{--  <div class="col-md-6">
 									<input class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" type="date" name="date-123">
@@ -386,7 +386,7 @@
 									<input type="text" class="form-control" placeholder="Alamat Sekarang" name="alamat" required>
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Tanggal Meninggal" name="tanggal" required>
+									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Meninggal" name="tanggal" required>
 								</div>
 								<div class="col-md-6">
 									<input type="text" class="form-control" placeholder="Tempat Meninggal" name="alamat" required>
@@ -422,7 +422,7 @@
 									<input type="text" class="form-control" placeholder="Hari Lahir" name="hari_lahir" required>
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Tanggal Lahir" name="tanggal" required>
+									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir" required>
 								</div>
 								<div class="col-md-6">
 									<input type="text" class="form-control" placeholder="Jam Lahir" name="jam_lahir" required>
@@ -490,7 +490,7 @@
 									<input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir" required>
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Tanggal Lahir" name="tanggal_lahir" required>
+									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir" required>
 								</div>
 								{{--  <div class="col-md-6">
 									<input class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" type="date" name="date-123">
@@ -534,7 +534,7 @@
 									<input type="text" class="form-control" placeholder="name Kegiatan" name="tujuan_surat" required>
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Tanggal Kegiatan" name="tanggal" required>
+									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Kegiatan" name="tanggal" required>
 								</div>
 								<div class="col-md-6">
 									<input type="text" class="form-control" placeholder="Alamat Tempat Kegiatan" name="alamat" required>
@@ -576,7 +576,7 @@
 									<input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir" required>
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Tanggal Lahir" name="tanggal_lahir" required>
+									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir" required>
 								</div>
 								{{--  <div class="col-md-6">
 									<input class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" type="date" name="date-123">
@@ -666,7 +666,7 @@
 									<input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir" required>
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Tanggal Lahir" name="tanggal_lahir" required>
+									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir" required>
 								</div>
 								{{--  <div class="col-md-6">
 									<input class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" type="date" name="date-123">
@@ -762,7 +762,7 @@
 									<input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir" required>
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Tanggal Lahir" name="tanggal_lahir" required>
+									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir" required>
 								</div>
 								{{--  <div class="col-md-6">
 									<input class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" type="date" name="date-123">
@@ -849,7 +849,7 @@
 									<input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir" required>
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Tanggal Lahir" name="tanggal_lahir" required>
+									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir" required>
 								</div>
 								{{--  <div class="col-md-6">
 									<input class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" type="date" name="date-123">
@@ -884,7 +884,7 @@
 									<input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir" required>
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Tanggal Lahir" name="tanggal_lahir" required>
+									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir" required>
 								</div>
 								{{--  <div class="col-md-6">
 									<input class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" type="date" name="date-123">
@@ -947,7 +947,7 @@
 									<input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir" required>
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Tanggal Lahir" name="tanggal_lahir" required>
+									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir" required>
 								</div>
 								{{--  <div class="col-md-6">
 									<input class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" type="date" name="date-123">

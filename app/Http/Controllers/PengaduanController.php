@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Http\Request;
 
 use App\Http\Requests\StorePengaduanRequest;
 use App\Http\Requests\UpdatePengaduanRequest;
@@ -8,60 +9,22 @@ use App\Models\Pengaduan;
 
 class PengaduanController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+    public function submitForm(Request $request)
     {
- 
+        $formData = new Pengaduan();
+        $formData->nama = $request->input('nama');
+        $formData->whatsapp = $request->input('whatsapp');
+        $formData->prihal = $request->input('prihal');
+        $formData->aduan = $request->input('aduan');
+        $formData->save();
+
+    
+        return back()->with('success', 'Form berhasil dikirim!');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function dashboard()
     {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(StorePengaduanRequest $request)
-    {
-        
-    }
-       
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Pengaduan $pengaduan)
-    {
-
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Pengaduan $pengaduan)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdatePengaduanRequest $request, Pengaduan $pengaduan)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Pengaduan $pengaduan)
-    {
-        //
+        $formDatas = Pengaduan::all();
+    return view('dashboard.home', compact('formDatas'));
     }
 }

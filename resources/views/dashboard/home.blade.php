@@ -221,20 +221,15 @@
                             </tr>
                         </tfoot> -->
                         <tbody>
-                            {{--  @foreach ($pengaduan as $data)  --}}
+                        {{--  @foreach($formDatas as $formData)
                             <tr>
-                                {{--  <td>{{ $data->id }}</td>
-                                <td>{{ $data->name }}</td>
-                                <td>{{ $data->perihal }}</td>
-                                <td>{{ $data->aduan }}</td>
-                                <td>{{ $data->created_at->format('d-m-Y H:i:s') }}</td>
-                                <td>
-                                    <a href="https://api.whatsapp.com/send?phone={{ $data->whatsapp }}&text=Halo%20{{ $data->name }},%20saya%20ingin%20menindaklanjuti%20pengaduan%20Anda%20tentang%20{{ $data->perihal }}">Hubungi via WhatsApp</a>
-                                </td>  --}}
-                                
-                                
+                                <td>{{ $formData->nama }}</td>
+                                <td>{{ $formData->whatsapp }}</td>
+                                <td>{{ $formData->prihal }}</td>
+                                <td>{{ $formData->aduan }}</td>
                             </tr>
-                            {{--  @endforeach  --}}
+                        @endforeach  --}}
+                          
                             
                         </tbody>
                     </table>

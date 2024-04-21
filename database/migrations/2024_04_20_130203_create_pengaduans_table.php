@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('pengaduans', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('nama');
             $table->string('whatsapp');
             $table->string('prihal');
-            $table->string('aduan');
+            $table->text('aduan');
             $table->timestamps();
         });
     }

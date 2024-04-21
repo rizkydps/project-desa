@@ -36,7 +36,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="tables.html">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Request Surat</span></a>
+                    <span>Permintaan Surat</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="tables.html">

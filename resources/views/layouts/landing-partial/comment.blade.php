@@ -9,22 +9,22 @@
         </div>
         <div class="appointment_box">
             <h4 class="text-center mb-3">Buat Aduan</h4>
-            <form method="POST">
+            <form action="{{ route('submit.form') }}" method="POST">
                 @csrf
                 <div class="row">
                     <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder="Nama Lengkap*" name="name" required>
+                        <input type="text" class="form-control" placeholder="Nama Lengkap*" name="nama" required>
                     </div>
                     <div class="col-md-6">
                         <input type="tel" class="form-control" placeholder="Nomer Hp" name="whatsapp" required>
                     </div>
                     <div class="col-md-12">
-                        <input type="tel" class="form-control" placeholder="Perihal" name="perihal" required>
+                        <input type="tel" class="form-control" placeholder="Prihal" name="prihal" required>
                     </div>
                     
                     
                     <div class="col-md-12">
-                        <textarea name="message" cols="40" rows="10" class="form-control" name="aduan" placeholder="Tulis Aduan...." required></textarea>
+                        <textarea name="aduan"  cols="40" rows="10" class="form-control"  placeholder="Tulis Aduan...." required></textarea>
                     </div>
                     <div class="col-md-12">
                         <button class="pbmit-btn" type="submit">
@@ -38,6 +38,9 @@
                     </div>
                 </div>
             </form>
+            @if(session('success'))
+    <script>alert("{{ session('success') }}");</script>
+@endif
         </div>
     </div>
 </section>

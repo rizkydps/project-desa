@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('surats', function (Blueprint $table) {
             $table->id();
             $table->string('whatsapp');
-            $table->string('nama')->nullable();
+            $table->string('name')->nullable();
             $table->string('nik')->nullable();
             $table->string('tempat_lahir');
             

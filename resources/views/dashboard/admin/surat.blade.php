@@ -12,7 +12,7 @@
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Surat Keterangan Domisili</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Permintaan Surat</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -46,24 +46,10 @@
                                                 <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target=".bd-example-modal-lg"><i
                                             class="fas fa-eye"></i></button></td>
                                             <td><button type="button" class="btn btn-info">Menunggu</button></td>
-
+                                                    
                                             <td>
                                                 <a href=""><button type="button" class="btn btn-warning"><i class="fas fa-edit"></i></button></a>
-                                                <a href=""><button type="button" class="btn btn-danger"><i class="fas fa-print"></i></button></a>
-                                                <a href=""><button type="button" class="btn btn-success"><i class="fas fa-info"></i></button></a>
-
-                                            </td>
-                                        </tr><tr>
-                                            <td>1</td>
-                                            <td>1</td>
-                                            <td>Pak Vagus</td>
-                                            <td><a href="" class="btn btn-outline-info"><i
-                                                class="fas fa-eye"></i></a></td>
-                                            <td><button type="button" class="btn btn-success">Selesai</button></td>
-
-                                            <td>
-                                                <a href=""><button type="button" class="btn btn-warning"><i class="fas fa-edit"></i></button></a>
-                                                <a href=""><button type="button" class="btn btn-danger"><i class="fas fa-print"></i></button></a>
+                                                {{--  <a href=""><button type="button" class="btn btn-danger"><i class="fas fa-print"></i></button></a>  --}}
                                                 <a href=""><button type="button" class="btn btn-success"><i class="fas fa-info"></i></button></a>
 
                                             </td>
