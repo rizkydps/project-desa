@@ -26,9 +26,4 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function dashboard()
-{
-    $formDatas = Pengaduan::all();
-    return view('dashboard.home', compact('formDatas'));
-}
 }

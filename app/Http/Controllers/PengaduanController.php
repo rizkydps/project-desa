@@ -22,9 +22,11 @@ class PengaduanController extends Controller
         return back()->with('success', 'Form berhasil dikirim!');
     }
 
-    public function dashboard()
+    public function index()
     {
-        $formDatas = Pengaduan::all();
-    return view('dashboard.home', compact('formDatas'));
+    $pengaduans = Pengaduan::all();
+   return view('dashboard.home.index', compact('pengaduans'));
+
     }
+
 }

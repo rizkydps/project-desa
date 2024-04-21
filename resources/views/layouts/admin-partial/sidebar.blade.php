@@ -28,13 +28,13 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="buttons.html">Data Staff</a>
-                        <a class="collapse-item" href="cards.html">Surats</a>
+                        <a class="collapse-item" href="cards.html">Kategori Surat</a>
                         <a class="collapse-item" href="cards.html">Surats</a>
                     </div>
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Permintaan Surat</span></a>
             </li>

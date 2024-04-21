@@ -1,6 +1,5 @@
 @extends('layouts.admin-partial.master')
 
-
 @section('content')
 
 <div class="container-fluid">
@@ -221,16 +220,23 @@
                             </tr>
                         </tfoot> -->
                         <tbody>
-                        {{--  @foreach($formDatas as $formData)
+
+                            @foreach($pengaduans as $pengaduan)
                             <tr>
-                                <td>{{ $formData->nama }}</td>
-                                <td>{{ $formData->whatsapp }}</td>
-                                <td>{{ $formData->prihal }}</td>
-                                <td>{{ $formData->aduan }}</td>
+                                <td>{{ $loop->iteration }}</td>
+                                <td>{{ $pengaduan->created_at->format('Y-m-d H:i:s') }}</td>
+                                <td>{{ $pengaduan->nama }}</td>
+                                <td>{{ $pengaduan->prihal }}</td>
+                                <td>{{ $pengaduan->aduan }}</td>
+                                <td>{{ $pengaduan->created_at->diffForHumans() }}</td>
+                                <td>
+                                    
+                                </td>
                             </tr>
-                        @endforeach  --}}
-                          
-                            
+                            <td colspan="8">
+                                <strong>0 Data Found</strong>
+                            </td>
+                            @endforeach 
                         </tbody>
                     </table>
                 </div>
