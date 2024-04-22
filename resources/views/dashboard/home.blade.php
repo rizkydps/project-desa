@@ -225,7 +225,7 @@
                                         $wa = intval($wa);
                                         
                                     @endphp
-                                    <a href="https://wa.me/{{ $wa }}"><button type="button" class="btn btn-success"><i class="fas fa-whatsapp"></i></button></a>
+                                    <a href="https://wa.me/{{ $wa }}"><button type="button" class="btn btn-success"><i class="fab fa-whatsapp"></i></button></a>
                                 </td>
                             </tr>
                             @endforeach 

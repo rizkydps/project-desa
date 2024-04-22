@@ -115,7 +115,7 @@ class PengajuanSuratController extends Controller
         //$surat->save();
         $surat->kategori_surat = $request->kategori_surat;
 
-        dd($surat);
+        //dd($surat);
         // return redirect()->route('succes.store');
 
 
