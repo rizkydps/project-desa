@@ -20,40 +20,42 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>ID Pengajuan</th>
                                             <th>Nama Pemohon</th>
+                                            <th>Nama Surat</th>
                                             <th>Lihat Data</th>
                                             <th>Status</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
-                                    <!-- <tfoot>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
-                                        </tr>
-                                    </tfoot> -->
+                    
                                     <tbody>
+                                        @foreach($permintaans as $permintaan)
                                         <tr>
-                                            <td>1</td>
-                                            <td>1</td>
-                                            <td>Pak Adi</td>
+                                            <td>{{ $loop->iteration}}</td>
+                                            <td>{{ $permintaan->name}}</td>
+                                            <td>{{ $permintaan->kategori_surat}}</td>
                                             <td>
                                                 <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target=".bd-example-modal-lg"><i
                                             class="fas fa-eye"></i></button></td>
-                                            <td><button type="button" class="btn btn-info">Menunggu</button></td>
+
+                                            <td><span class="btn btn-info">
+                                                @if($permintaan->status == 0)
+                                                    Belum Di Setujuin
+                                                @elseif($permintaan->status = 1)
+                                                    DiTerima
+                                                @else
+                                                    Di Tolak
+                                                @endif  
+                                                </span></td>
                                                     
                                             <td>
-                                                <a href=""><button type="button" class="btn btn-warning"><i class="fas fa-edit"></i></button></a>
-                                                {{--  <a href=""><button type="button" class="btn btn-danger"><i class="fas fa-print"></i></button></a>  --}}
-                                                <a href=""><button type="button" class="btn btn-success"><i class="fas fa-info"></i></button></a>
+                                                <a href="{{ route('dashboard.permintaan.edit', $permintaan->id) }}"><button type="button" class="btn btn-warning"><i class="fas fa-edit"></i></button></a>
+                        
 
                                             </td>
                                         </tr>
+                                        @endforeach
+                                        
                             
                                         
                                     </tbody>
@@ -62,7 +64,7 @@
                         </div>
                     </div>
 
-                </div>
+                </div>  
 
                 
 

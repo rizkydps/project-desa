@@ -34,7 +34,7 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="{{ route('dashboard.permintaan.index')}}">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Permintaan Surat</span></a>
             </li>
@@ -58,9 +58,9 @@
             </div>
 
             <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="{{ route('dashboard.surat.index') }}">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Surat Keterangan Domisili</span></a>
+                    <span>Surat</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="tables.html">

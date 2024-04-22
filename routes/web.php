@@ -6,6 +6,9 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PengaduanController;
 use App\Http\Controllers\KategoriSuratController;
 use App\Http\Controllers\PengajuanSuratController;
+use App\Http\Controllers\PermintaanSuratController;
+use App\Http\Controllers\SuratController;
+
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
 
@@ -55,7 +58,7 @@ Route::post('/formulir/store', [PengajuanSuratController::class, 'store'])->name
 // Route::get('/formulir/store', [PengajuanSuratController::class, 'store'])->name('formulir.store');
 
 
-// Route::get('/formulir-sukses', [PengajuanSuratController::class, 'success'])->name('succes.store');
+Route::get('/formulir-sukses', [PengajuanSuratController::class, 'success'])->name('success.store');
 
 
 
@@ -64,22 +67,24 @@ Route::post('/formulir/store', [PengajuanSuratController::class, 'store'])->name
 
     Route::prefix('dashboard')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
+    Route::resource('/permintaan-surat', PermintaanSuratController::class, ['names' => 'dashboard.permintaan']);
+    Route::resource('kategori-surat', KategoriSuratController::class);
 
+    Route::resource('surat', SuratController::class, ['names' => 'dashboard.surat']);
+    Route::get('/surats/records', [SuratController::class, 'data_table'])->name('dashboard.surat.records');
+    
 
-
-        Route::resource('kategori-surat', KategoriSuratController::class);
-
-
-
-                Route::get('surat/domisili', function () {
-                    return view('dashboard.surat.keteranganDomisili');
-                })->name('dashboard.surat.domisili');
-
-
-        // Route::get('/', function () {
-        //     return view('dashboard.home');
-        // })->name('dashboard.home');
+    Route::get('surat/domisili', function () {
+     return view('dashboard.surat.keteranganDomisili');
+    })->name('dashboard.surat.domisili');
+    Route::prefix('surat')->group(function () {
+    
     });
+    
+
+    });
+
+
 //});
 
 

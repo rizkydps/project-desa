@@ -18,9 +18,9 @@ class PengajuanSuratController extends Controller
     }
 
     public function store(Request $request) {
-        // $request->validate([
-        //     'whatsapp' => 'required'
-        // ]);
+        $request->validate([
+            'whatsapp' => 'required'
+        ]);
         $picture_name_ktp = null;
         $picture_name_kk = null;
         $picture_name_akta = null;
@@ -112,13 +112,21 @@ class PengajuanSuratController extends Controller
         $surat->foto_barang = $picture_name_barang; // img
         $surat->foto_bukti = $picture_name_bukti; // img
         $surat->foto_pengantar = $picture_name_pengantar; // img
-        //$surat->save();
-        $surat->kategori_surat = $request->kategori_surat;
 
-        //dd($surat);
-        // return redirect()->route('succes.store');
+        $kategori_surat = $request->kategori_surat;
+        $parts = explode('form-', $kategori_surat);
+        $last_part = end($parts);
 
+        $surat->kategori_surat = intval($last_part);
+        
 
+        $surat->save();
+        return redirect()->route('success.store');
 
+    }
+
+    public function success()
+    {
+        return view('landing.formulir-sukses');
     }
 }
