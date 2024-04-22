@@ -12,7 +12,7 @@ class KategoriSuratSeed extends Seeder
      */
     public function run(): void
     {
-        $forms = [
+        $fom = [
             ['name' => 'Surat Keterangan Domisili'],
             ['name' => 'Surat keterangn pindah'],
             ['name' => 'Surat pengantar Nikah'],
@@ -27,6 +27,6 @@ class KategoriSuratSeed extends Seeder
         ];
 
         // Insert data into the database
-        DB::table('kategori_surat')->insert($forms);
+        DB::table('kategori_surat')->insert($fom);
     }
 }
