@@ -57,6 +57,10 @@
                                         <option value="form9">Surat Kehilangan</option>
                                         <option value="form10">Surat Keterangan Orang Yang Sama</option>
                                         <option value="form11">Surat Rekomendasi</option>
+										@foreach($kategoriSurat as $surat)
+                                        <option value="{{ $surat->id}}">{{ $surat->name }}</option>
+											
+										@endforeach
                                     </select>
                                 </div>
                             </div>
