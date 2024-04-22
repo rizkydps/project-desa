@@ -18,18 +18,22 @@ class PengajuanSuratController extends Controller
     }
 
     public function store(Request $request) {
-        $request->validate([
-            'whatsapp' => 'required'
-        ]);
-
+        // $request->validate([
+        //     'whatsapp' => 'required'
+        // ]);
+        $picture_name_ktp = null;
+        $picture_name_kk = null;
+        $picture_name_akta = null;
+        $picture_name_barang = null;
+        $picture_name_bukti = null;
+        $picture_name_pengantar = null;
         if($request->foto_ktp) {
 
             $ext = $request->foto_ktp->getClientOriginalExtension();
 
             $upload_path = public_path('storage/img/surat/ktp/');
             $picture_name_ktp = 'ktp_'.$request->name.".$ext";
-
-            $request->foto_ktp->move($upload_path. $picture_name_ktp);
+            $request->foto_ktp->move($upload_path, $picture_name_ktp);
         }
         if($request->foto_kk) {
 
@@ -38,7 +42,7 @@ class PengajuanSuratController extends Controller
             $upload_path = public_path('storage/img/surat/kk/');
             $picture_name_kk = 'kk_'.$request->name.".$ext";
 
-            $request->foto_kk->move($upload_path. $picture_name_kk);
+            $request->foto_kk->move($upload_path, $picture_name_kk);
         }
         if($request->foto_akta) {
 
@@ -47,7 +51,7 @@ class PengajuanSuratController extends Controller
             $upload_path = public_path('storage/img/surat/akta/');
             $picture_name_akta = 'akta_'.$request->name.".$ext";
 
-            $request->foto_akta->move($upload_path. $picture_name_akta);
+            $request->foto_akta->move($upload_path, $picture_name_akta);
         }
         if($request->foto_barang) {
 
@@ -56,7 +60,7 @@ class PengajuanSuratController extends Controller
             $upload_path = public_path('storage/img/surat/barang/');
             $picture_name_barang = 'barang_'.$request->name.".$ext";
 
-            $request->foto_barang->move($upload_path. $picture_name_barang);
+            $request->foto_barang->move($upload_path, $picture_name_barang);
         }
         if($request->foto_bukti) {
 
@@ -65,7 +69,7 @@ class PengajuanSuratController extends Controller
             $upload_path = public_path('storage/img/surat/bukti/');
             $picture_name_bukti = 'bukti_'.$request->name.".$ext";
 
-            $request->foto_bukti->move($upload_path. $picture_name_bukti);
+            $request->foto_bukti->move($upload_path, $picture_name_bukti);
         }
         if($request->foto_pengantar) {
 
@@ -74,9 +78,9 @@ class PengajuanSuratController extends Controller
             $upload_path = public_path('storage/img/surat/pengantar/');
             $picture_name_pengantar = 'pengantar_'.$request->name.".$ext";
 
-            $request->foto_pengantar->move($upload_path. $picture_name_pengantar);
+            $request->foto_pengantar->move($upload_path, $picture_name_pengantar);
         }
-        
+
 
         $surat = new Surat();
         $surat->whatsapp = $request->whatsapp;
@@ -112,7 +116,7 @@ class PengajuanSuratController extends Controller
         $surat->kategori_surat = $request->kategori_surat;
 
         dd($surat);
-        return redirect()->route('succes.store');
+        // return redirect()->route('succes.store');
 
 
 

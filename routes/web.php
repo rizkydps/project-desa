@@ -52,10 +52,10 @@ Route::post('/submit-form', [PengaduanController::class, 'store'])->name('store'
 
 Route::get('/formulir', [PengajuanSuratController::class, 'index'])->name('formulir');
 Route::post('/formulir/store', [PengajuanSuratController::class, 'store'])->name('formulir.store');
-Route::get('/formulir/store', [PengajuanSuratController::class, 'store'])->name('formulir.store');
+// Route::get('/formulir/store', [PengajuanSuratController::class, 'store'])->name('formulir.store');
 
 
-Route::get('/formulir-sukses', [PengajuanSuratController::class, 'succes'])->name('succes.store');
+// Route::get('/formulir-sukses', [PengajuanSuratController::class, 'success'])->name('succes.store');
 
 
 
