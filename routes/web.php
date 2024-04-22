@@ -48,11 +48,19 @@ Route::get('/', function () {
 });
 
 Route::post('/submit-form', [PengaduanController::class, 'store'])->name('store');
+
+
 Route::get('/formulir', [PengajuanSuratController::class, 'index'])->name('formulir');
+Route::post('/formulir/store', [PengajuanSuratController::class, 'store'])->name('formulir.store');
+Route::get('/formulir/store', [PengajuanSuratController::class, 'store'])->name('formulir.store');
+
+
+Route::get('/formulir-sukses', [PengajuanSuratController::class, 'succes'])->name('succes.store');
 
 
 
-Route::middleware('auth')->group(function () {
+
+//Route::middleware('auth')->group(function () {
 
     Route::prefix('dashboard')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
@@ -62,16 +70,17 @@ Route::middleware('auth')->group(function () {
         Route::resource('kategori-surat', KategoriSuratController::class);
 
 
-        Route::get('surat/domisili', function () {
-            return view('dashboard.surat.keteranganDomisili');
-        })->name('dashboard.surat.domisili');
+
+                Route::get('surat/domisili', function () {
+                    return view('dashboard.surat.keteranganDomisili');
+                })->name('dashboard.surat.domisili');
 
 
         // Route::get('/', function () {
         //     return view('dashboard.home');
         // })->name('dashboard.home');
     });
-});
+//});
 
 
 // Route::get('formulir', function () {

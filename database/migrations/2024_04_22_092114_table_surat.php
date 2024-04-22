@@ -52,6 +52,7 @@ return new class extends Migration
             $table->string('foto_bukti')->nullable();
             $table->string('foto_pengantar')->nullable();
             $table->string('status')->default('0');
+            $table->foreignId('kategori_surat')->references('id')->on('kategori_surat')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -62,5 +63,6 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('surats');
+        
     }
 };

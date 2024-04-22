@@ -40,25 +40,15 @@
 					<div class="appointment_box">
                         
 						
-						<form action="{{ route('store') }}" method="post">
+						<form action="{{ route('formulir.store') }}" method="post">
 							@csrf
                             <div class="row">
                                 <div class="col-md-4 mx-auto">
-                                    <select class="form-select form-control" aria-label="Default select example" id="form-selector" onchange="showForm()">
+                                    <select class="form-select form-control" name="kategori_surat" aria-label="Default select example" id="form-selector" onchange="showForm()">
                                         <option value="">Pilih Jenis Surat :</option>
-                                        <option value="form1">Surat Keterangan Domisili</option>
-                                        <option value="form2">Surat keterangn pindah</option>
-                                        <option value="form3">Surat pengantar Nikah</option>
-                                        <option value="form4">Surat Keterangan Kematian</option>
-                                        <option value="form5">Surat Keterangan  Kelahiran</option>
-                                        <option value="form6">Surat Ijin Keramaian</option>
-                                        <option value="form7">Surat Keterangan Tidak Mampu</option>
-                                        <option value="form8">Surat Keterangan Usaha</option>
-                                        <option value="form9">Surat Kehilangan</option>
-                                        <option value="form10">Surat Keterangan Orang Yang Sama</option>
-                                        <option value="form11">Surat Rekomendasi</option>
+                                        {{--    --}}
 										@foreach($kategoriSurat as $surat)
-                                        <option value="{{ $surat->id}}">{{ $surat->name }}</option>
+                                        <option value="form-{{ $surat->id}}">{{ $surat->name }}</option>
 											
 										@endforeach
                                     </select>
@@ -66,26 +56,26 @@
                             </div>
 
 
-                            <h4 class="text-center mb-3">name surat</h4>
+                            {{--  <h4 class="text-center mb-3">name surat</h4>  --}}
                         
                             {{--  Surat Keterangan Domisili  --}}
 					
-                        <div class="form-container" id="form1">
+                        <div class="form-container" id="form-1">
 							<div class="row ">
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Nama Lengkap" name="name" required>
+									<input type="text" class="form-control" placeholder="Nama Lengkap" name="name">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="NIK" name="nik" required>
+									<input type="text" class="form-control" placeholder="NIK" name="nik">
 								</div>
 								<div class="col-md-6">
-									<input type="tel" class="form-control" placeholder="No Whatsapp" name="whatsapp" required>
+									<input type="tel" class="form-control" placeholder="No Whatsapp" name="whatsapp">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir" required>
+									<input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir">
 								</div>
 								<div class="col-md-6">
-									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir" required>
+									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir">
 								</div>
 								{{--  <div class="col-md-6">
 									<input class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" type="date" name="date-123">
@@ -119,7 +109,7 @@
 								
 								
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Pekerjaan" name="pekerjaan" required>
+									<input type="text" class="form-control" placeholder="Pekerjaan" name="pekerjaan">
 								</div>
 								<div class="col-md-6">
 									<select class="form-select form-control" aria-label="Default select example">
@@ -129,7 +119,7 @@
 									</select>
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Alamat Sekarang" name="alamat" required>
+									<input type="text" class="form-control" placeholder="Alamat Sekarang" name="alamat">
 								</div>
 								<div class="col-md-6">
 									<label for="formFile" class="form-label">Upload Foto KTP :</label>
@@ -160,25 +150,25 @@
                         </div>
 
                             {{--  Surat keterangn pindah --}}
-                        <div class="form-container" id="form2">
+                        <div class="form-container" id="form-2">
                             <div class="row ">
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Nama Lengkap" name="name" required>
+									<input type="text" class="form-control" placeholder="Nama Lengkap" name="name">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="NIK" name="nik" required>
+									<input type="text" class="form-control" placeholder="NIK" name="nik">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Nomer Kartu Keluarga" name="nno_kk" required>
+									<input type="text" class="form-control" placeholder="Nomer Kartu Keluarga" name="nno_kk">
 								</div>
 								<div class="col-md-6">
-									<input type="tel" class="form-control" placeholder="No Whatsapp" name="whatsapp" required>
+									<input type="tel" class="form-control" placeholder="No Whatsapp" name="whatsapp">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir" required>
+									<input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir">
 								</div>
 								<div class="col-md-6">
-									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir" required>
+									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir">
 								</div>
 								{{--  <div class="col-md-6">
 									<input class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" type="date" name="date-123">
@@ -212,7 +202,7 @@
 								
 								
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Pekerjaan" name="pekerjaan" required>
+									<input type="text" class="form-control" placeholder="Pekerjaan" name="pekerjaan">
 								</div>
 								<div class="col-md-6">
 									<select class="form-select form-control" aria-label="Default select example">
@@ -222,16 +212,16 @@
 									</select>
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Alamat Asal" name="alamat" required>
+									<input type="text" class="form-control" placeholder="Alamat Asal" name="alamat">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Alamat Tujuan Pindah" name="alamat" required>
+									<input type="text" class="form-control" placeholder="Alamat Tujuan Pindah" name="alamat">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Alasan Pindah" name="tujuan_surat" required>
+									<input type="text" class="form-control" placeholder="Alasan Pindah" name="tujuan_surat">
 								</div>
 								<div class="col-md-6">
-									<input type="number" class="form-control" placeholder="Jumlah - Pengikut / keluarga yang pindah" name="pengikut_pindah" required>
+									<input type="number" class="form-control" placeholder="Jumlah - Pengikut / keluarga yang pindah" name="pengikut_pindah">
 								</div>
 
 								<div class="col-md-6">
@@ -260,22 +250,22 @@
 							</div>
                         </div>
                             {{--  Surat pengantar Nikah  --}}
-                        <div class="form-container" id="form3">
+                        <div class="form-container" id="form-3">
                             <div class="row ">
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="name Suami" name="name" required>
+									<input type="text" class="form-control" placeholder="name Suami" name="name">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="NIK Suami" name="nik" required>
+									<input type="text" class="form-control" placeholder="NIK Suami" name="nik">
 								</div>
 								<div class="col-md-6">
-									<input type="tel" class="form-control" placeholder="No Whatsapp Pemohon" name="whatsapp" required>
+									<input type="tel" class="form-control" placeholder="No Whatsapp Pemohon" name="whatsapp">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Tempat Lahir Suami" name="tempat_lahir" required>
+									<input type="text" class="form-control" placeholder="Tempat Lahir Suami" name="tempat_lahir">
 								</div>
 								<div class="col-md-6">
-									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir" required>
+									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir">
 								</div>
 								<div class="col-md-6">
 									<select class="form-select form-control" aria-label="Default select example">
@@ -291,16 +281,16 @@
 								{{--  Istri  --}}
 
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="name Istri" name="name" required>
+									<input type="text" class="form-control" placeholder="name Istri" name="name">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="NIK Istri" name="nik" required>
+									<input type="text" class="form-control" placeholder="NIK Istri" name="nik">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Tempat Lahir Istri" name="tempat_lahir" required>
+									<input type="text" class="form-control" placeholder="Tempat Lahir Istri" name="tempat_lahir">
 								</div>
 								<div class="col-md-6">
-									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir" required>
+									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir">
 								</div>
 								<div class="col-md-6">
 									<select class="form-select form-control" aria-label="Default select example">
@@ -315,11 +305,11 @@
 								
 								
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Pekerjaan Istri" name="pekerjaan" required>
+									<input type="text" class="form-control" placeholder="Pekerjaan Istri" name="pekerjaan">
 								</div>
 								
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Alamat Istri" name="alamat" required>
+									<input type="text" class="form-control" placeholder="Alamat Istri" name="alamat">
 								</div>
 
 								<div class="col-md-6">
@@ -349,22 +339,22 @@
 							</div>
                         </div>
                             {{--  Surat Keterangan Kematian  --}}
-                        <div class="form-container" id="form4">
+                        <div class="form-container" id="form-4">
                             <div class="row ">
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Nama Lengkap" name="name" required>
+									<input type="text" class="form-control" placeholder="Nama Lengkap" name="name">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="NIK" name="nik" required>
+									<input type="text" class="form-control" placeholder="NIK" name="nik">
 								</div>
 								<div class="col-md-6">
-									<input type="tel" class="form-control" placeholder="No Whatsapp" name="whatsapp" required>
+									<input type="tel" class="form-control" placeholder="No Whatsapp" name="whatsapp">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir" required>
+									<input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir">
 								</div>
 								<div class="col-md-6">
-									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir" required>
+									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir">
 								</div>
 								{{--  <div class="col-md-6">
 									<input class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" type="date" name="date-123">
@@ -379,25 +369,25 @@
 									</select>
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Umur" name="umur" required>
+									<input type="text" class="form-control" placeholder="Umur" name="umur">
 								</div>
 								
 								
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Pekerjaan" name="pekerjaan" required>
+									<input type="text" class="form-control" placeholder="Pekerjaan" name="pekerjaan">
 								</div>
 								
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Alamat Sekarang" name="alamat" required>
+									<input type="text" class="form-control" placeholder="Alamat Sekarang" name="alamat">
 								</div>
 								<div class="col-md-6">
-									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Meninggal" name="tanggal" required>
+									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Meninggal" name="tanggal">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Tempat Meninggal" name="alamat" required>
+									<input type="text" class="form-control" placeholder="Tempat Meninggal" name="alamat">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Alamat Makam" name="alamat" required>
+									<input type="text" class="form-control" placeholder="Alamat Makam" name="alamat">
 								</div>
 								<div class="col-md-6">
 									<label for="formFile" class="form-label">Upload Foto KTP Almarhum :</label>
@@ -421,16 +411,16 @@
 							</div>
                         </div>
                             {{--  Surat Keterangan  Kelahiran  --}}
-                        <div class="form-container" id="form5">
+                        <div class="form-container" id="form-5">
                             <div class="row ">
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Hari Lahir" name="hari_lahir" required>
+									<input type="text" class="form-control" placeholder="Hari Lahir" name="hari_lahir">
 								</div>
 								<div class="col-md-6">
-									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir" required>
+									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Jam Lahir" name="jam_lahir" required>
+									<input type="text" class="form-control" placeholder="Jam Lahir" name="jam_lahir">
 								</div>
 								<div class="col-md-6">
 									<select class="form-select form-control" aria-label="Default select example">
@@ -442,26 +432,26 @@
 									</select>
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Berat Badan" name="berat_badan" required>
+									<input type="text" class="form-control" placeholder="Berat Badan" name="berat_badan">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Panjang Badan" name="panjang_badan" required>
+									<input type="text" class="form-control" placeholder="Panjang Badan" name="panjang_badan">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="name Ayah" name="name" required>
+									<input type="text" class="form-control" placeholder="name Ayah" name="name">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="name Ibu" name="name" required>
+									<input type="text" class="form-control" placeholder="name Ibu" name="name">
 								</div>
 								<div class="col-md-6">
-									<input type="tel" class="form-control" placeholder="No Whatsapp Pemohon" name="whatsapp" required>
+									<input type="tel" class="form-control" placeholder="No Whatsapp Pemohon" name="whatsapp">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Pekerjaan" name="pekerjaan" required>
+									<input type="text" class="form-control" placeholder="Pekerjaan" name="pekerjaan">
 								</div>
 								
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Alamat Sekarang" name="alamat" required>
+									<input type="text" class="form-control" placeholder="Alamat Sekarang" name="alamat">
 								</div>
 								<div class="col-md-6">
 									<label for="formFile" class="form-label">Upload Foto Surat Keterangan dari Bidan/Rumah Sakit  :</label>
@@ -480,22 +470,22 @@
 							</div>
                         </div>
                             {{--  Surat Ijin Keramaian  --}}
-                        <div class="form-container" id="form6">
+                        <div class="form-container" id="form-6">
                             <div class="row ">
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="name Pemohon" name="name" required>
+									<input type="text" class="form-control" placeholder="name Pemohon" name="name">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="NIK Pemohon" name="nik" required>
+									<input type="text" class="form-control" placeholder="NIK Pemohon" name="nik">
 								</div>
 								<div class="col-md-6">
-									<input type="tel" class="form-control" placeholder="No Whatsapp" name="whatsapp" required>
+									<input type="tel" class="form-control" placeholder="No Whatsapp" name="whatsapp">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir" required>
+									<input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir">
 								</div>
 								<div class="col-md-6">
-									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir" required>
+									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir">
 								</div>
 								{{--  <div class="col-md-6">
 									<input class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" type="date" name="date-123">
@@ -523,7 +513,7 @@
 								
 								
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Pekerjaan" name="pekerjaan" required>
+									<input type="text" class="form-control" placeholder="Pekerjaan" name="pekerjaan">
 								</div>
 								<div class="col-md-6">
 									<select class="form-select form-control" aria-label="Default select example">
@@ -533,16 +523,16 @@
 									</select>
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Alamat Pemohon" name="alamat" required>
+									<input type="text" class="form-control" placeholder="Alamat Pemohon" name="alamat">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="name Kegiatan" name="tujuan_surat" required>
+									<input type="text" class="form-control" placeholder="name Kegiatan" name="tujuan_surat">
 								</div>
 								<div class="col-md-6">
-									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Kegiatan" name="tanggal" required>
+									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Kegiatan" name="tanggal">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Alamat Tempat Kegiatan" name="alamat" required>
+									<input type="text" class="form-control" placeholder="Alamat Tempat Kegiatan" name="alamat">
 								</div>
 								<div class="col-md-6">
 									<label for="formFile" class="form-label">Upload Foto KTP Pemohon :</label>
@@ -566,22 +556,22 @@
 							</div>
                         </div>
                             {{--  Surat Keterangan Tidak Mampu  --}}
-                        <div class="form-container" id="form7">
+                        <div class="form-container" id="form-7">
                             <div class="row ">
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Nama Lengkap" name="name" required>
+									<input type="text" class="form-control" placeholder="Nama Lengkap" name="name">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="NIK" name="nik" required>
+									<input type="text" class="form-control" placeholder="NIK" name="nik">
 								</div>
 								<div class="col-md-6">
-									<input type="tel" class="form-control" placeholder="No Whatsapp" name="whatsapp" required>
+									<input type="tel" class="form-control" placeholder="No Whatsapp" name="whatsapp">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir" required>
+									<input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir">
 								</div>
 								<div class="col-md-6">
-									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir" required>
+									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir">
 								</div>
 								{{--  <div class="col-md-6">
 									<input class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" type="date" name="date-123">
@@ -615,7 +605,7 @@
 								
 								
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Pekerjaan" name="pekerjaan" required>
+									<input type="text" class="form-control" placeholder="Pekerjaan" name="pekerjaan">
 								</div>
 								<div class="col-md-6">
 									<select class="form-select form-control" aria-label="Default select example">
@@ -625,10 +615,10 @@
 									</select>
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Alamat Sekarang" name="alamat" required>
+									<input type="text" class="form-control" placeholder="Alamat Sekarang" name="alamat">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Tujuan Surat" name="tujuan_surat" required>
+									<input type="text" class="form-control" placeholder="Tujuan Surat" name="tujuan_surat">
 								</div>
 								<div class="col-md-6">
 									<label for="formFile" class="form-label">Upload Foto KTP :</label>
@@ -656,22 +646,22 @@
 							</div>
                         </div>
                             {{--  Surat Keterangan Usaha  --}}
-                        <div class="form-container" id="form8">
+                        <div class="form-container" id="form-8">
                             <div class="row ">
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Nama Lengkap" name="name" required>
+									<input type="text" class="form-control" placeholder="Nama Lengkap" name="name">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="NIK" name="nik" required>
+									<input type="text" class="form-control" placeholder="NIK" name="nik">
 								</div>
 								<div class="col-md-6">
-									<input type="tel" class="form-control" placeholder="No Whatsapp" name="whatsapp" required>
+									<input type="tel" class="form-control" placeholder="No Whatsapp" name="whatsapp">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir" required>
+									<input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir">
 								</div>
 								<div class="col-md-6">
-									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir" required>
+									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir">
 								</div>
 								{{--  <div class="col-md-6">
 									<input class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" type="date" name="date-123">
@@ -705,7 +695,7 @@
 								
 								
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Pekerjaan" name="pekerjaan" required>
+									<input type="text" class="form-control" placeholder="Pekerjaan" name="pekerjaan">
 								</div>
 								<div class="col-md-6">
 									<select class="form-select form-control" aria-label="Default select example">
@@ -715,16 +705,16 @@
 									</select>
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Alamat Sekarang" name="alamat" required>
+									<input type="text" class="form-control" placeholder="Alamat Sekarang" name="alamat">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="name Usaha" name="name" required>
+									<input type="text" class="form-control" placeholder="name Usaha" name="name">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Tahun Mulai" name="tahun_mulai" required>
+									<input type="text" class="form-control" placeholder="Tahun Mulai" name="tahun_mulai">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Tujuan Usaha" name="tujuan_surat" required>
+									<input type="text" class="form-control" placeholder="Tujuan Usaha" name="tujuan_surat">
 								</div>
 								<div class="col-md-6">
 									<label for="formFile" class="form-label">Upload Foto KTP :</label>
@@ -752,22 +742,22 @@
 							</div>
                         </div>
                             {{--  Surat Kehilangan  --}}
-                        <div class="form-container" id="form9">
+                        <div class="form-container" id="form-9">
                             <div class="row ">
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Nama Lengkap" name="name" required>
+									<input type="text" class="form-control" placeholder="Nama Lengkap" name="name">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="NIK" name="nik" required>
+									<input type="text" class="form-control" placeholder="NIK" name="nik">
 								</div>
 								<div class="col-md-6">
-									<input type="tel" class="form-control" placeholder="No Whatsapp" name="whatsapp" required>
+									<input type="tel" class="form-control" placeholder="No Whatsapp" name="whatsapp">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir" required>
+									<input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir">
 								</div>
 								<div class="col-md-6">
-									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir" required>
+									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir">
 								</div>
 								{{--  <div class="col-md-6">
 									<input class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" type="date" name="date-123">
@@ -801,13 +791,13 @@
 								
 								
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Pekerjaan" name="pekerjaan" required>
+									<input type="text" class="form-control" placeholder="Pekerjaan" name="pekerjaan">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Alamat Sekarang" name="alamat" required>
+									<input type="text" class="form-control" placeholder="Alamat Sekarang" name="alamat">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Barang Hilang" name="name" required>
+									<input type="text" class="form-control" placeholder="Barang Hilang" name="name">
 								</div>
 								<div class="col-md-6">
 									<label for="formFile" class="form-label">Upload Foto KTP :</label>
@@ -839,57 +829,22 @@
 							</div>
                         </div>
                             {{--  Surat Keterangan Orang Yang Sama  --}}
-                        <div class="form-container" id="form10">
+                        <div class="form-container" id="form-10">
 							<div class="row ">
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Nama Lengkap" name="name" required>
+									<input type="text" class="form-control" placeholder="Nama Lengkap" name="name">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="NIK" name="nik" required>
+									<input type="text" class="form-control" placeholder="NIK" name="nik">
 								</div>
 								<div class="col-md-6">
-									<input type="tel" class="form-control" placeholder="No Whatsapp" name="whatsapp" required>
+									<input type="tel" class="form-control" placeholder="No Whatsapp" name="whatsapp">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir" required>
+									<input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir">
 								</div>
 								<div class="col-md-6">
-									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir" required>
-								</div>
-								{{--  <div class="col-md-6">
-									<input class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" type="date" name="date-123">
-								</div>  --}}
-								<div class="col-md-6">
-									<select class="form-select form-control" aria-label="Default select example">
-										<option value="">Jenis Kelamin</option>
-										<option value="jenis_kelamin">Laki - Laki</option>
-										<option value="jenis_kelamin">Perempuan</option>
-
-										
-									</select>
-								</div>
-								
-								
-								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Pekerjaan" name="pekerjaan" required>
-								</div>
-								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Alamat Sekarang" name="alamat" required>
-								</div>
-
-
-								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Nama Lengkap" name="name" required>
-								</div>
-								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="NIK" name="nik" required>
-								</div>
-
-								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir" required>
-								</div>
-								<div class="col-md-6">
-									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir" required>
+									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir">
 								</div>
 								{{--  <div class="col-md-6">
 									<input class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" type="date" name="date-123">
@@ -906,10 +861,45 @@
 								
 								
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Pekerjaan" name="pekerjaan" required>
+									<input type="text" class="form-control" placeholder="Pekerjaan" name="pekerjaan">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Alamat Sekarang" name="alamat" required>
+									<input type="text" class="form-control" placeholder="Alamat Sekarang" name="alamat">
+								</div>
+
+
+								<div class="col-md-6">
+									<input type="text" class="form-control" placeholder="Nama Lengkap" name="name">
+								</div>
+								<div class="col-md-6">
+									<input type="text" class="form-control" placeholder="NIK" name="nik">
+								</div>
+
+								<div class="col-md-6">
+									<input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir">
+								</div>
+								<div class="col-md-6">
+									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir">
+								</div>
+								{{--  <div class="col-md-6">
+									<input class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" type="date" name="date-123">
+								</div>  --}}
+								<div class="col-md-6">
+									<select class="form-select form-control" aria-label="Default select example">
+										<option value="">Jenis Kelamin</option>
+										<option value="jenis_kelamin">Laki - Laki</option>
+										<option value="jenis_kelamin">Perempuan</option>
+
+										
+									</select>
+								</div>
+								
+								
+								<div class="col-md-6">
+									<input type="text" class="form-control" placeholder="Pekerjaan" name="pekerjaan">
+								</div>
+								<div class="col-md-6">
+									<input type="text" class="form-control" placeholder="Alamat Sekarang" name="alamat">
 								</div>
 								<div class="col-md-6">
 									<label for="formFile" class="form-label">Upload Foto KTP :</label>
@@ -937,22 +927,22 @@
 							</div>
                         </div>
                             {{--  Surat Rekomendasi  --}}
-                        <div class="form-container" id="form11">
+                        <div class="form-container" id="form-11">
                             <div class="row ">
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Nama Lengkap" name="name" required>
+									<input type="text" class="form-control" placeholder="Nama Lengkap" name="name">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="NIK" name="nik" required>
+									<input type="text" class="form-control" placeholder="NIK" name="nik">
 								</div>
 								<div class="col-md-6">
-									<input type="tel" class="form-control" placeholder="No Whatsapp" name="whatsapp" required>
+									<input type="tel" class="form-control" placeholder="No Whatsapp" name="whatsapp">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir" required>
+									<input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir">
 								</div>
 								<div class="col-md-6">
-									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir" required>
+									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir">
 								</div>
 								{{--  <div class="col-md-6">
 									<input class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" type="date" name="date-123">
@@ -986,14 +976,14 @@
 								
 								
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Pekerjaan" name="pekerjaan" required>
+									<input type="text" class="form-control" placeholder="Pekerjaan" name="pekerjaan">
 								</div>
 								
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Alamat Sekarang" name="alamat" required>
+									<input type="text" class="form-control" placeholder="Alamat Sekarang" name="alamat">
 								</div>
 								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Tujuan Surat" name="tujuan_surat" required>
+									<input type="text" class="form-control" placeholder="Tujuan Surat" name="tujuan_surat">
 								</div>
 								<div class="col-md-6">
 									<label for="formFile" class="form-label">Upload Foto KTP :</label>

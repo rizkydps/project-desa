@@ -9,7 +9,7 @@
         </div>
         <div class="appointment_box">
             <h4 class="text-center mb-3">Buat Aduan</h4>
-            <form action="{{ route('submit.form') }}" method="POST">
+            <form action="{{ route('store') }}" method="POST">
                 @csrf
                 <div class="row">
                     <div class="col-md-6">
