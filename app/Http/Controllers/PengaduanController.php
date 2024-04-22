@@ -18,15 +18,15 @@ class PengaduanController extends Controller
         $formData->aduan = $request->input('aduan');
         $formData->save();
 
-    
+
         return back()->with('success', 'Form berhasil dikirim!');
     }
 
-    public function index()
-    {
-    $datas = Pengaduan::all();
-    //datas = Pengaduan::select(['id','nama','whatsapp','prihal','aduan'])->get();
-    return view('dashboard.home', compact('datas'));
-    }
+    // public function index()
+    // {
+    // $datas = Pengaduan::all();
+    // //datas = Pengaduan::select(['id','nama','whatsapp','prihal','aduan'])->get();
+    // return view('dashboard.home', compact('datas'));
+    // }
 
 }

@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container-fluid">
-                    
+
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
@@ -100,10 +100,10 @@
 
     <!-- Content Row -->
 
-    
+
 
     <!-- Content Row -->
-    
+
             <!-- Approach -->
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
@@ -177,18 +177,18 @@
                             </div>
                         </div>
 
-                        
+
                     </div>
                 </div>
             </div>
 
-        
-    
+
+
 
 
     <!-- TABLES -->
 
-    
+
         <!-- Approach -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
@@ -206,13 +206,12 @@
                                 <th>Isi Pengaduan</th>
                                 <th>Waktu Aduan</th>
                                 <th>Action</th>
-                                
+
                             </tr>
                         </thead>
                         <tbody>
-
-                            @foreach($datas as $data)
-                            {{--  <tr>
+                            @foreach($pengaduans as $data)
+                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $data->created_at->format('Y-m-d H:i:s') }}</td>
                                 <td>{{ $data->nama }}</td>
@@ -222,8 +221,8 @@
                                 <td>
 
                                 </td>
-                            </tr>  --}}
-                            @endforeach 
+                            </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

@@ -9,8 +9,8 @@ class KategoriSuratController extends Controller
 {
     public function index()
     {
-        $kategori_surat = KategoriSurat::all();
-        return view('dashboard.admin.kategori_surat.index', compact('kategori_surat'));
+        $kategori_surats = KategoriSurat::all();
+        return view('dashboard.admin.kategori_surat.index', compact('kategori_surats'));
     }
 
     public function create()

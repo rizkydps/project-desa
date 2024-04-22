@@ -7,10 +7,10 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                   
+
 
                     <!-- DataTales Example -->
-                    
+
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Kategori Surat</h6>
@@ -28,9 +28,9 @@
                                             <th>Action</th>
                                         </tr>
                                     </thead>
-                                    
+
                                     <tbody>
-                                        @foreach ($kategori_surat as $kategori)
+                                        @foreach ($kategori_surats as $kategori)
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
                                             <td>{{ $kategori->name }}</td>
@@ -44,12 +44,12 @@
                                                              }">
                                                      <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
                                                  </a>
-                                                 
+
                                                  <form id="delete-kategori-{{ $kategori->id }}" action="{{ route('kategori-surat.destroy', $kategori->id) }}" method="POST" style="display: none;">
                                                      @csrf
                                                      @method('DELETE')
                                                  </form>
-                                                 
+
                                             </td>
                                         </tr>
                                         @endforeach
@@ -77,7 +77,7 @@
 
                 </div>
 
-                
+
 
                 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg">

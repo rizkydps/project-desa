@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
 
 use App\Http\Controllers\PengaduanController;
 use App\Http\Controllers\KategoriSuratController;
@@ -49,23 +50,23 @@ Route::post('/submit-form', [PengaduanController::class, 'store'])->name('submit
 
 
 Route::middleware('auth')->group(function () {
-    
-    Route::get('/dashboard', [PengaduanController::class, 'index'])->name('dashboard.index');
-    
 
     Route::prefix('dashboard')->group(function () {
-        
+    Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
+
+
+
         Route::resource('kategori-surat', KategoriSuratController::class);
-        
-        
+
+
         Route::get('surat/domisili', function () {
             return view('dashboard.surat.keteranganDomisili');
         })->name('dashboard.surat.domisili');
-        
-        
-        Route::get('/', function () {
-            return view('dashboard.home');
-        })->name('dashboard.home');
+
+
+        // Route::get('/', function () {
+        //     return view('dashboard.home');
+        // })->name('dashboard.home');
     });
 });
 
