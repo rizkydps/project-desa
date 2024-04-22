@@ -8,6 +8,7 @@ use App\Http\Controllers\KategoriSuratController;
 use App\Http\Controllers\PengajuanSuratController;
 use App\Http\Controllers\PermintaanSuratController;
 use App\Http\Controllers\SuratController;
+use App\Http\Controllers\UserController;
 
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
@@ -69,6 +70,8 @@ Route::get('/formulir-sukses', [PengajuanSuratController::class, 'success'])->na
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
     Route::resource('/permintaan-surat', PermintaanSuratController::class, ['names' => 'dashboard.permintaan']);
     Route::resource('kategori-surat', KategoriSuratController::class);
+    Route::resource('/users', UserController::class, ['names' => 'dashboard.users']);
+
 
     Route::resource('surat', SuratController::class, ['names' => 'dashboard.surat']);
     Route::get('/surats/records', [SuratController::class, 'data_table'])->name('dashboard.surat.records');

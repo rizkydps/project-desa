@@ -39,42 +39,7 @@
 
                 
 
-                <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Data diri Pemohon</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                          <div class="modal-body">
-                            <div class="container-fluid">
-                              <div class="row">
-                                <div class="col-md-4">
-                                    <p>Nama        :   Putri</p>
-                                    <p>Nik        :   Putri</p>
-
-                                    <p>Alamat        :   Putri</p>
-
-                                    <p>Pekerjaan        :   Putri</p>
-
-                                </div>
-                              </div>
-                              <div class="row">
-                                    <div class="col-8 col-sm-6">
-                                      Foto Ktp:
-                                      <img src="../public/landing/images/kal.png" alt="">
-                                    </div>
-                                    <div class="col-4 col-sm-6">
-                                      foto Surat Pengantar:
-                                      <img src="https://unsplash.com/photos/white-printer-paper-on-white-textile-lFe1giUJ6CQ" alt="">
-                                    </div>
-                              </div>
-                            </div>
-                          </div>
-                    </div>
-                </div>
+                
                 </div>
                 <!-- /.container-fluid -->
 

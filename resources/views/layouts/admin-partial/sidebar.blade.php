@@ -29,7 +29,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="buttons.html">Data Staff</a>
                         <a class="collapse-item" href="{{ route('kategori-surat.index') }}">Kategori Surat</a>
-                        <a class="collapse-item" href="cards.html">Surats</a>
+                        <a class="collapse-item" href="{{ route('dashboard.users.index')}}">Data Pengguna</a>
                     </div>
                 </div>
             </li>
