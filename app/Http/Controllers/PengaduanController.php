@@ -9,7 +9,7 @@ use App\Models\Pengaduan;
 
 class PengaduanController extends Controller
 {
-    public function submitForm(Request $request)
+    public function store(Request $request)
     {
         $formData = new Pengaduan();
         $formData->nama = $request->input('nama');
@@ -24,9 +24,9 @@ class PengaduanController extends Controller
 
     public function index()
     {
-    $pengaduans = Pengaduan::all();
-   return view('dashboard.home.index', compact('pengaduans'));
-
+    $datas = Pengaduan::all();
+    //datas = Pengaduan::select(['id','nama','whatsapp','prihal','aduan'])->get();
+    return view('dashboard.home', compact('datas'));
     }
 
 }

@@ -21,8 +21,6 @@
                     <div class="col-md-12">
                         <input type="tel" class="form-control" placeholder="Prihal" name="prihal" required>
                     </div>
-                    
-                    
                     <div class="col-md-12">
                         <textarea name="aduan"  cols="40" rows="10" class="form-control"  placeholder="Tulis Aduan...." required></textarea>
                     </div>

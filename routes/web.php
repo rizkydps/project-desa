@@ -45,7 +45,7 @@ Route::get('/', function () {
     return view('landing');
 });
 
-Route::post('/submit-form', [PengaduanController::class, 'submitForm'])->name('submit.form');
+Route::post('/submit-form', [PengaduanController::class, 'store'])->name('submit.form');
 
 
 Route::middleware('auth')->group(function () {
@@ -73,7 +73,4 @@ Route::middleware('auth')->group(function () {
 Route::get('formulir', function () {
     return view('landing.formulir');
 });
-
-
-
 

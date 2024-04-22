@@ -40,8 +40,8 @@
 					<div class="appointment_box">
                         
 						
-						<form>
-
+						<form action="{{ route('store') }}" method="post">
+							@csrf
                             <div class="row">
                                 <div class="col-md-4 mx-auto">
                                     <select class="form-select form-control" aria-label="Default select example" id="form-selector" onchange="showForm()">
@@ -129,18 +129,19 @@
 								</div>
 								<div class="col-md-6">
 									<label for="formFile" class="form-label">Upload Foto KTP :</label>
-  									<input class="form-control" type="file" id="formFile" name="foto_ktp">
+  									<input class="" type="file" id="formFile" name="foto_ktp">
 								</div>
 								<div class="col-md-6">
 									<label for="formFile" class="form-label">Upload Foto Pengantar dari Rt/Rw :</label>
-  									<input class="form-control" type="file" id="formFile" name="foto_pengantar">
+  									<input class="" type="file" id="formFile" name="foto_pengantar">
 								</div>
 								<div class="col-md-6">
 									<label for="formFile" class="form-label">Upload Foto KK :</label>
-  									<input class="form-control" type="file" id="formFile" name="foto_kk">
+  									<input class="" type="file" id="formFile" name="foto_kk">
 								</div>
+								
 
-								<div class="col-md-12">
+								<div class="col-md-12 mt-4">
 									<button class="pbmit-btn">
 										<span class="pbmit-button-text" name="submit">Kirim</span>
 										<span class="pbmit-button-icon-wrapper">
@@ -231,18 +232,18 @@
 
 								<div class="col-md-6">
 									<label for="formFile" class="form-label">Upload Foto KTP :</label>
-  									<input class="form-control" type="file" id="formFile" name="foto_ktp">
+  									<input class="" type="file" id="formFile" name="foto_ktp">
 								</div>
 								<div class="col-md-6">
 									<label for="formFile" class="form-label">Upload Foto Pengantar dari Rt/Rw :</label>
-  									<input class="form-control" type="file" id="formFile" name="foto_pengantar">
+  									<input class="" type="file" id="formFile" name="foto_pengantar">
 								</div>
 								<div class="col-md-6">
 									<label for="formFile" class="form-label">Upload Foto KK :</label>
-  									<input class="form-control" type="file" id="formFile" name="foto_kk">
+  									<input class="" type="file" id="formFile" name="foto_kk">
 								</div>
 
-								<div class="col-md-12">
+								<div class="col-md-12 mt-4">
 									<button class="pbmit-btn">
 										<span class="pbmit-button-text" name="submit">Kirim</span>
 										<span class="pbmit-button-icon-wrapper">
@@ -319,19 +320,19 @@
 
 								<div class="col-md-6">
 									<label for="formFile" class="form-label">Upload Foto KTP Suami :</label>
-  									<input class="form-control" type="file" id="formFile" name="foto_ktp">
+  									<input class="" type="file" id="formFile" name="foto_ktp">
 								</div>
 								<div class="col-md-6">
 									<label for="formFile" class="form-label">Upload Foto KTP Istri :</label>
-  									<input class="form-control" type="file" id="formFile" name="foto_ktp">
+  									<input class="" type="file" id="formFile" name="foto_ktp">
 								</div>
 								<div class="col-md-6">
 									<label for="formFile" class="form-label">Upload Foto Pengantar dari Rt/Rw :</label>
-  									<input class="form-control" type="file" id="formFile" name="foto_pengantar">
+  									<input class="" type="file" id="formFile" name="foto_pengantar">
 								</div>
 								
 
-								<div class="col-md-12">
+								<div class="col-md-12 mt-4">
 									<button class="pbmit-btn">
 										<span class="pbmit-button-text" name="submit">Kirim</span>
 										<span class="pbmit-button-icon-wrapper">
@@ -396,14 +397,14 @@
 								</div>
 								<div class="col-md-6">
 									<label for="formFile" class="form-label">Upload Foto KTP Almarhum :</label>
-  									<input class="form-control" type="file" id="formFile" name="foto_ktp">
+  									<input class="" type="file" id="formFile" name="foto_ktp">
 								</div>
 								<div class="col-md-6">
 									<label for="formFile" class="form-label">Upload Foto Pengantar/Keterangan dari Rt/Rw :</label>
-  									<input class="form-control" type="file" id="formFile" name="foto_pengantar">
+  									<input class="" type="file" id="formFile" name="foto_pengantar">
 								</div>
 
-								<div class="col-md-12">
+								<div class="col-md-12 mt-4">
 									<button class="pbmit-btn">
 										<span class="pbmit-button-text" name="submit">Kirim</span>
 										<span class="pbmit-button-icon-wrapper">
@@ -460,9 +461,9 @@
 								</div>
 								<div class="col-md-6">
 									<label for="formFile" class="form-label">Upload Foto Surat Keterangan dari Bidan/Rumah Sakit  :</label>
-  									<input class="form-control" type="file" id="formFile" name="foto_pengantar">
+  									<input class="" type="file" id="formFile" name="foto_pengantar">
 								</div>
-								<div class="col-md-12">
+								<div class="col-md-12 mt-4">
 									<button class="pbmit-btn">
 										<span class="pbmit-button-text" name="submit">Kirim</span>
 										<span class="pbmit-button-icon-wrapper">
@@ -541,14 +542,14 @@
 								</div>
 								<div class="col-md-6">
 									<label for="formFile" class="form-label">Upload Foto KTP Pemohon :</label>
-  									<input class="form-control" type="file" id="formFile" name="foto_ktp">
+  									<input class="" type="file" id="formFile" name="foto_ktp">
 								</div>
 								<div class="col-md-6">
 									<label for="formFile" class="form-label">Upload Foto Pengantar dari Rt/Rw :</label>
-  									<input class="form-control" type="file" id="formFile" name="foto_pengantar">
+  									<input class="" type="file" id="formFile" name="foto_pengantar">
 								</div>
 
-								<div class="col-md-12">
+								<div class="col-md-12 mt-4">
 									<button class="pbmit-btn">
 										<span class="pbmit-button-text" name="submit">Kirim</span>
 										<span class="pbmit-button-icon-wrapper">
@@ -627,18 +628,18 @@
 								</div>
 								<div class="col-md-6">
 									<label for="formFile" class="form-label">Upload Foto KTP :</label>
-  									<input class="form-control" type="file" id="formFile" name="foto_ktp">
+  									<input class="" type="file" id="formFile" name="foto_ktp">
 								</div>
 								<div class="col-md-6">
 									<label for="formFile" class="form-label">Upload Foto Pengantar dari Rt/Rw :</label>
-  									<input class="form-control" type="file" id="formFile" name="foto_pengantar">
+  									<input class="" type="file" id="formFile" name="foto_pengantar">
 								</div>
 								<div class="col-md-6">
 									<label for="formFile" class="form-label">Upload Foto KK :</label>
-  									<input class="form-control" type="file" id="formFile" name="foto_kk">
+  									<input class="" type="file" id="formFile" name="foto_kk">
 								</div>
 
-								<div class="col-md-12">
+								<div class="col-md-12 mt-4">
 									<button class="pbmit-btn">
 										<span class="pbmit-button-text" name="submit">Kirim</span>
 										<span class="pbmit-button-icon-wrapper">
@@ -734,7 +735,7 @@
   									<input class="form-control" type="file" id="formFile" name="foto_kk">
 								</div>
 
-								<div class="col-md-12">
+								<div class="col-md-12 mt-4">
 									<button class="pbmit-btn">
 										<span class="pbmit-button-text" name="submit">Kirim</span>
 										<span class="pbmit-button-icon-wrapper">
@@ -806,22 +807,22 @@
 								</div>
 								<div class="col-md-6">
 									<label for="formFile" class="form-label">Upload Foto KTP :</label>
-  									<input class="form-control" type="file" id="formFile" name="foto_ktp">
+  									<input class="" type="file" id="formFile" name="foto_ktp">
 								</div>
 								<div class="col-md-6">
 									<label for="formFile" class="form-label">Upload Foto Barang :</label>
-  									<input class="form-control" type="file" id="formFile" name="foto_barang">
+  									<input class="" type="file" id="formFile" name="foto_barang">
 								</div>
 								<div class="col-md-6">
 									<label for="formFile" class="form-label">Foto bpkb/stnk (jika kendaraan) :</label>
-  									<input class="form-control" type="file" id="formFile" name="foto_bukti">
+  									<input class="" type="file" id="formFile" name="foto_bukti">
 								</div>
 								<div class="col-md-6">
 									<label for="formFile" class="form-label">Upload Foto Buku Tabungan (jika kartu atm) :</label>
-  									<input class="form-control" type="file" id="formFile" name="foto_bukti">
+  									<input class="" type="file" id="formFile" name="foto_bukti">
 								</div>
 
-								<div class="col-md-12">
+								<div class="col-md-12 mt-4">
 									<button class="pbmit-btn">
 										<span class="pbmit-button-text" name="submit">Kirim</span>
 										<span class="pbmit-button-icon-wrapper">
@@ -908,18 +909,18 @@
 								</div>
 								<div class="col-md-6">
 									<label for="formFile" class="form-label">Upload Foto KTP :</label>
-  									<input class="form-control" type="file" id="formFile" name="foto_ktp">
+  									<input class="" type="file" id="formFile" name="foto_ktp">
 								</div>
 								<div class="col-md-6">
 									<label for="formFile" class="form-label">Upload Foto Akta Kelahiran :</label>
-  									<input class="form-control" type="file" id="formFile" name="foto_akta">
+  									<input class="" type="file" id="formFile" name="foto_akta">
 								</div>
 								<div class="col-md-6">
 									<label for="formFile" class="form-label">Upload Foto KK :</label>
-  									<input class="form-control" type="file" id="formFile" name="foto_kk">
+  									<input class="" type="file" id="formFile" name="foto_kk">
 								</div>
 
-								<div class="col-md-12">
+								<div class="col-md-12 mt-4">
 									<button class="pbmit-btn">
 										<span class="pbmit-button-text" name="submit">Kirim</span>
 										<span class="pbmit-button-icon-wrapper">
@@ -992,11 +993,11 @@
 								</div>
 								<div class="col-md-6">
 									<label for="formFile" class="form-label">Upload Foto KTP :</label>
-  									<input class="form-control" type="file" id="formFile" name="foto_ktp">
+  									<input class="" type="file" id="formFile" name="foto_ktp">
 								</div>
 								
 
-								<div class="col-md-12">
+								<div class="col-md-12 mt-4">
 									<button class="pbmit-btn">
 										<span class="pbmit-button-text" name="submit">Kirim</span>
 										<span class="pbmit-button-icon-wrapper">

@@ -209,43 +209,26 @@
                                 
                             </tr>
                         </thead>
-                        <!-- <tfoot>
-                            <tr>
-                                <th>Name</th>
-                                <th>Position</th>
-                                <th>Office</th>
-                                <th>Age</th>
-                                <th>Start date</th>
-                                <th>Salary</th>
-                            </tr>
-                        </tfoot> -->
                         <tbody>
 
-                            @foreach($pengaduans as $pengaduan)
-                            <tr>
+                            @foreach($datas as $data)
+                            {{--  <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $pengaduan->created_at->format('Y-m-d H:i:s') }}</td>
-                                <td>{{ $pengaduan->nama }}</td>
-                                <td>{{ $pengaduan->prihal }}</td>
-                                <td>{{ $pengaduan->aduan }}</td>
-                                <td>{{ $pengaduan->created_at->diffForHumans() }}</td>
+                                <td>{{ $data->created_at->format('Y-m-d H:i:s') }}</td>
+                                <td>{{ $data->nama }}</td>
+                                <td>{{ $data->prihal }}</td>
+                                <td>{{ $data->aduan }}</td>
+                                <td>{{ $data->created_at->diffForHumans() }}</td>
                                 <td>
-                                    
+
                                 </td>
-                            </tr>
-                            <td colspan="8">
-                                <strong>0 Data Found</strong>
-                            </td>
+                            </tr>  --}}
                             @endforeach 
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
-
-    
-          
-
 </div>
 
 @endsection
