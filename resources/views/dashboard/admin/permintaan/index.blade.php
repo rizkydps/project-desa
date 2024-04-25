@@ -33,7 +33,12 @@
                                         <tr>
                                             <td>{{ $loop->iteration}}</td>
                                             <td>{{ $permintaan->name}}</td>
-                                            <td>{{ $permintaan->kategori_surat}}</td>
+
+                                            
+                                            <td>{{ $permintaan->kategori_surat}}
+
+                                            
+                                            </td>
                                             <td>
                                                 <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target=".bd-example-modal-lg"><i
                                             class="fas fa-eye"></i></button></td>

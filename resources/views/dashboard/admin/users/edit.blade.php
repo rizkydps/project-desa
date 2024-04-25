@@ -38,7 +38,7 @@
                         @elseif($users->role == '3')
                             <option selected value="{{ $users->role }}">Kasi kesra dan Pelayanan</option>
                         @elseif($users->role == '4')
-                            <option selected value="{{ $user->role }}">Kaur Umum dan Perencanaan</option>
+                            <option selected value="{{ $users->role }}">Kaur Umum dan Perencanaan</option>
 
                         @endif
                             <option disabled>Pilih Role</option>

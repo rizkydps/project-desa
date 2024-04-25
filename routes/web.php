@@ -9,7 +9,7 @@ use App\Http\Controllers\PengajuanSuratController;
 use App\Http\Controllers\PermintaanSuratController;
 use App\Http\Controllers\SuratController;
 use App\Http\Controllers\UserController;
-
+use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
 
@@ -51,6 +51,10 @@ Route::get('/', function () {
     return view('landing');
 });
 
+
+Route::get('/pegawai', [PegawaiController::class, 'show'])->name('pegawai');
+
+
 Route::post('/submit-form', [PengaduanController::class, 'store'])->name('store');
 
 
@@ -71,18 +75,20 @@ Route::get('/formulir-sukses', [PengajuanSuratController::class, 'success'])->na
     Route::resource('/permintaan-surat', PermintaanSuratController::class, ['names' => 'dashboard.permintaan']);
     Route::resource('kategori-surat', KategoriSuratController::class);
     Route::resource('/users', UserController::class, ['names' => 'dashboard.users']);
+    Route::resource('/pegawai', PegawaiController::class, ['names' => 'dashboard.pegawai']);
+
 
 
     Route::resource('surat', SuratController::class, ['names' => 'dashboard.surat']);
     Route::get('/surats/records', [SuratController::class, 'data_table'])->name('dashboard.surat.records');
     
 
-    Route::get('surat/domisili', function () {
-     return view('dashboard.surat.keteranganDomisili');
-    })->name('dashboard.surat.domisili');
-    Route::prefix('surat')->group(function () {
+    // Route::get('surat/domisili', function () {
+    //  return view('dashboard.surat.keteranganDomisili');
+    // })->name('dashboard.surat.domisili');
+    // Route::prefix('surat')->group(function () {
     
-    });
+    // });
     
 
     });

@@ -12,4 +12,6 @@ class PermintaanSuratController extends Controller
 
         return view('dashboard.admin.permintaan.index', compact('permintaans'));
     }
+
+    
 }

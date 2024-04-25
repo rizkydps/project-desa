@@ -68,7 +68,7 @@ class UserController extends Controller
     $user->email = $request->email;
     $user->role = $request->role;
     
-    // Periksa apakah password baru diset, jika ya, hash password baru dan simpan
+    
     if ($request->has('password')) {
         $user->password = Hash::make($request->password);
     }

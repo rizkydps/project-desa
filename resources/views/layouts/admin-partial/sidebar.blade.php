@@ -27,9 +27,10 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="buttons.html">Data Staff</a>
-                        <a class="collapse-item" href="{{ route('kategori-surat.index') }}">Kategori Surat</a>
+                        <a class="collapse-item" href="{{ route('dashboard.pegawai.index')}}">Data Pegawai</a>
                         <a class="collapse-item" href="{{ route('dashboard.users.index')}}">Data Pengguna</a>
+                        <a class="collapse-item" href="{{ route('kategori-surat.index') }}">Kategori Surat</a>
+
                     </div>
                 </div>
             </li>
@@ -43,12 +44,6 @@
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Buat Berita</span></a>
             </li> 
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Administrator</span></a>
-            </li>  
-
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -62,80 +57,6 @@
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Surat</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Surat Keterangan Pindah</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Surat pengantar Nikah</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Surat Keterangan Keratin</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Surat Keterangan  Kelahiran</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Kasi kesra dan Pelayanan
-            </div>
-
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Surat Rekomendasi</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Surat Keterangan tidak Mampu</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Surat Keterangan Usaha</span></a>
-            </li>
-            
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Kaur Umum dan Perencanaan
-            </div>
-
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Surat Kehilangan</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Surat ijin Keramaian</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Surat Keterangan Orang yang sama</span></a>
-            </li>
-            
-
-
-
-
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
