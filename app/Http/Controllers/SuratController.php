@@ -12,9 +12,11 @@ class SuratController extends Controller
    public function index(Request $request)
    {
         
-        $kategoris = KategoriSurat::select(['id','name'])->get();
-        return view('dashboard.admin.surat.index', compact('kategoris'));
-   }
+    $kategoris = KategoriSurat::select(['id','name'])->get();
+    $permintaans = Surat::where('status', '1')->get();
+    return view('dashboard.admin.surat.index', compact('kategoris', 'permintaans'));
+    }
+   
 
    public function data_table()
     {
@@ -32,4 +34,8 @@ class SuratController extends Controller
                 ->make(true);
 
     }
+
+    
+
+    
 }

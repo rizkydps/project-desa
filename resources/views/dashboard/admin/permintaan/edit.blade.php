@@ -16,7 +16,7 @@
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                        <form action="{{ route('kategori-surat.update', $kategoriSurat->id) }}" method="POST">
+                        <form action="{{ route('dashboard.permintaan.update', $kategoriSurat->id) }}" method="POST">
                             @csrf
                             @method('PUT')
                             <div class="row mb-3 ">
@@ -25,7 +25,7 @@
                                 <input type="text" class="form-control" name="name" value="{{ $kategoriSurat->name }}">
                             </div>
                             </div>
-                            <a href="{{ route('kategori-surat.index') }}" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm"><i
+                            <a href="{{ route('dashboard.permintaan.index') }}" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm"><i
                                 class="  fa-sm text-white-50"></i>Kembali</a>
                                 <button type="submit" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                     class=" fa-sm text-white-50"></i>Ubah</button>

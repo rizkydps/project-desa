@@ -21,8 +21,7 @@
                                         <tr>
                                             <th>No</th>
                                             <th>Nama Pemohon</th>
-                                            <th>Nama Surat</th>
-                                            <th>Lihat Data</th>
+                                            <th>Jenis Surat</th>
                                             <th>Status</th>
                                             <th>Action</th>
                                         </tr>
@@ -33,30 +32,51 @@
                                         <tr>
                                             <td>{{ $loop->iteration}}</td>
                                             <td>{{ $permintaan->name}}</td>
-
-                                            
-                                            <td>{{ $permintaan->kategori_surat}}
-
-                                            
+                                            <td>
+                                                @php
+                                                $categories = [
+                                                    1 => 'Surat Keterangan Domisili',
+                                                    2 => 'Surat Keterangan Pindah',
+                                                    3 => 'Surat Pengantar Nikah',
+                                                    4 => 'Surat Keterangan Kematian',
+                                                    5 => 'Surat Keterangan Kelahiran',
+                                                    6 => 'Surat Ijin Keramaian',
+                                                    7 => 'Surat Keterangan Tidak Mampu',
+                                                    8 => 'Surat Keterangan Usaha',
+                                                    9 => 'Surat Kehilangan',
+                                                    10 => 'Surat Keterangan Orang Yang Sama',
+                                                    11 => 'Surat Rekomendasi'
+                                                ];
+                                                @endphp
+                                                {{ $categories[$permintaan->kategori_surat] ?? 'Tidak Di ketahui' }}
                                             </td>
-                                            <td>
-                                                <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target=".bd-example-modal-lg"><i
-                                            class="fas fa-eye"></i></button></td>
+                                            
 
-                                            <td><span class="btn btn-info">
+                                            <td>
                                                 @if($permintaan->status == 0)
-                                                    Belum Di Setujuin
-                                                @elseif($permintaan->status = 1)
-                                                    DiTerima
+                                                <span class="btn btn-warning">
+                                                
+                                                    Menunggu DiSetujui
+                                                </span>
                                                 @else
-                                                    Di Tolak
+                                                <span class="btn btn-danger">
+                                                
+                                                    Ditolak
+                                                </span>
                                                 @endif  
-                                                </span></td>
+                                            </td>
                                                     
-                                            <td>
-                                                <a href="{{ route('dashboard.permintaan.edit', $permintaan->id) }}"><button type="button" class="btn btn-warning"><i class="fas fa-edit"></i></button></a>
-                        
-
+                                                <td>
+                                                    <a class="btn btn-outline-info" href="{{ route('dashboard.permintaan.show', $permintaan->id) }}"><i
+                                                class="fas fa-eye"></i></a>
+                                                @php
+                                                $wa = '62' . substr($permintaan->whatsapp,1);
+                                                $wa = intval($wa);
+                
+                                                @endphp
+                                                <a href="https://wa.me/{{ $wa }}"><button type="button" class="btn btn-success"><i
+                                                            class="fab fa-whatsapp"></i></button></a>
+                                            
                                             </td>
                                         </tr>
                                         @endforeach
@@ -73,43 +93,7 @@
 
                 
 
-                <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Data diri Pemohon</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                          <div class="modal-body">
-                            <div class="container-fluid">
-                              <div class="row">
-                                <div class="col-md-4">
-                                    <p>Nama        :   Putri</p>
-                                    <p>Nik        :   Putri</p>
-
-                                    <p>Alamat        :   Putri</p>
-
-                                    <p>Pekerjaan        :   Putri</p>
-
-                                </div>
-                              </div>
-                              <div class="row">
-                                    <div class="col-8 col-sm-6">
-                                      Foto Ktp:
-                                      <img src="../public/landing/images/kal.png" alt="">
-                                    </div>
-                                    <div class="col-4 col-sm-6">
-                                      foto Surat Pengantar:
-                                      <img src="https://unsplash.com/photos/white-printer-paper-on-white-textile-lFe1giUJ6CQ" alt="">
-                                    </div>
-                              </div>
-                            </div>
-                          </div>
-                    </div>
-                </div>
-                </div>
+               
                 <!-- /.container-fluid -->
 
 @endsection

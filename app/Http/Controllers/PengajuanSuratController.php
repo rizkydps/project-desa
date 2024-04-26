@@ -83,6 +83,8 @@ class PengajuanSuratController extends Controller
 
 
         $surat = new Surat();
+        //$surat->nomer_surat = $request->nomer_surat;
+
         $surat->whatsapp = $request->whatsapp;
         $surat->name = $request->name;
         $surat->nik = $request->nik;

@@ -88,8 +88,8 @@
 								<div class="col-md-6">
 									<select class="form-select form-control" name="jenis_kelamin" aria-label="Default select example">
 										<option disabled selected	>Jenis Kelamin</option>
-										<option value="jenis_kelamin">Laki - Laki</option>
-										<option value="jenis_kelamin">Perempuan</option>
+										<option value="Laki-Laki">Laki - Laki</option>
+										<option value="Perempuan">Perempuan</option>
 
 										
 									</select>
@@ -187,8 +187,8 @@
 								<div class="col-md-6">
 									<select class="form-select form-control" name="jenis_kelamin" aria-label="Default select example">
 										<option disabled selected	>Jenis Kelamin</option>
-										<option value="jenis_kelamin">Laki - Laki</option>
-										<option value="jenis_kelamin">Perempuan</option>
+										<option value="Laki-Laki">Laki - Laki</option>
+										<option value="Perempuan">Perempuan</option>
 
 										
 									</select>
@@ -351,8 +351,9 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
                             {{--  Surat Keterangan Kematian  --}}
-                            <div class="form-container" id="form-4">
+                        <div class="form-container" id="form-4">
                                 <div class="row ">
                                     <div class="col-md-6">
                                         <input type="text" class="form-control" placeholder="Nama Lengkap" name="name">
@@ -379,9 +380,9 @@
 								</div>  --}}
 								<div class="col-md-6">
 									<select class="form-select form-control" name="jenis_kelamin" aria-label="Default select example">
-										<option disabled selected	>Jenis Kelamin</option>
-										<option value="jenis_kelamin">Laki - Laki</option>
-										<option value="jenis_kelamin">Perempuan</option>
+										<option disabled selected>Pilih Jenis Kelamin :</option>
+										<option value="Laki-Laki">Laki - Laki</option>
+										<option value="Perempuan">Perempuan</option>
 
 
                                         </select>
@@ -436,6 +437,7 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
                             {{--  Surat Keterangan  Kelahiran  --}}
                         <div class="form-container" id="form-5">
                             <div class="row ">
@@ -451,8 +453,8 @@
 								<div class="col-md-6">
 									<select class="form-select form-control" name="jenis_kelamin" aria-label="Default select example">
 										<option disabled selected	>Jenis Kelamin</option>
-										<option value="jenis_kelamin">Laki - Laki</option>
-										<option value="jenis_kelamin">Perempuan</option>
+										<option value="Laki-Laki">Laki - Laki</option>
+										<option value="Perempuan">Perempuan</option>
 
 
                                         </select>
@@ -501,6 +503,7 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
                             {{--  Surat Ijin Keramaian  --}}
                             <div class="form-container" id="form-6">
                                 <div class="row ">
@@ -530,8 +533,8 @@
 								<div class="col-md-6">
 									<select class="form-select form-control" name="jenis_kelamin" aria-label="Default select example">
 										<option disabled selected	>Jenis Kelamin</option>
-										<option value="jenis_kelamin">Laki - Laki</option>
-										<option value="jenis_kelamin">Perempuan</option>
+										<option value="Laki-Laki">Laki - Laki</option>
+										<option value="Perempuan">Perempuan</option>
 
 										
 									</select>
@@ -621,8 +624,8 @@
 								<div class="col-md-6">
 									<select class="form-select form-control" name="jenis_kelamin" aria-label="Default select example">
 										<option disabled selected	>Jenis Kelamin</option>
-										<option value="jenis_kelamin">Laki - Laki</option>
-										<option value="jenis_kelamin">Perempuan</option>
+										<option value="Laki-Laki">Laki - Laki</option>
+										<option value="Perempuan">Perempuan</option>
 
 										
 									</select>
@@ -715,9 +718,9 @@
 								</div>  --}}
 								<div class="col-md-6">
 									<select class="form-select form-control" name="jenis_kelamin" aria-label="Default select example">
-										<option disabled selected	>Jenis Kelamin</option>
-										<option value="jenis_kelamin">Laki - Laki</option>
-										<option value="jenis_kelamin">Perempuan</option>
+										<option disabled selected>Jenis Kelamin</option>
+										<option value="Laki-Laki">Laki - Laki</option>
+										<option value="Perempuan">Perempuan</option>
 
 										
 									</select>
@@ -817,8 +820,8 @@
 								<div class="col-md-6">
 									<select class="form-select form-control" name="jenis_kelamin" aria-label="Default select example">
 										<option disabled selected	>Jenis Kelamin</option>
-										<option value="jenis_kelamin">Laki - Laki</option>
-										<option value="jenis_kelamin">Perempuan</option>
+										<option value="Laki-Laki">Laki - Laki</option>
+										<option value="Perempuan">Perempuan</option>
 
 										
 									</select>
@@ -881,185 +884,186 @@
                                 </div>
                             </div>
                             {{--  Surat Keterangan Orang Yang Sama  --}}
-                        <div class="form-container" id="form-10">
-							<div class="row ">
-								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Nama Lengkap" name="name">
-								</div>
-								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="NIK" name="nik">
-								</div>
-								<div class="col-md-6">
-									<input type="tel" class="form-control" placeholder="No Whatsapp" name="whatsapp">
-								</div>
-								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir">
-								</div>
-								<div class="col-md-6">
-									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir">
-								</div>
-								{{--  <div class="col-md-6">
-									<input class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" type="date" name="date-123">
-								</div>  --}}
-								<div class="col-md-6">
-									<select class="form-select form-control" name="jenis_kelamin" aria-label="Default select example">
-										<option disabled selected	>Jenis Kelamin</option>
-										<option value="jenis_kelamin">Laki - Laki</option>
-										<option value="jenis_kelamin">Perempuan</option>
+                            <div class="form-container" id="form-10">
+                                <div class="row ">
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="Nama Lengkap" name="name">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="NIK" name="nik">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="tel" class="form-control" placeholder="No Whatsapp" name="whatsapp">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir">
+                                    </div>
+                                    {{--  <div class="col-md-6">
+                                        <input class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" type="date" name="date-123">
+                                    </div>  --}}
+                                    <div class="col-md-6">
+                                        <select class="form-select form-control" name="jenis_kelamin" aria-label="Default select example">
+                                            <option disabled selected	>Jenis Kelamin</option>
+                                            <option value="Laki-Laki">Laki - Laki</option>
+                                            <option value="Perempuan">Perempuan</option>
 
 
-                                            </select>
-                                        </div>
+                                                </select>
+                                            </div>
 
 
-                                        <div class="col-md-6">
-                                            <input type="text" class="form-control" placeholder="Pekerjaan"
-                                                name="pekerjaan">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <input type="text" class="form-control" placeholder="Alamat Sekarang"
-                                                name="alamat">
-                                        </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Pekerjaan"
+                                                    name="pekerjaan">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Alamat Sekarang"
+                                                    name="alamat">
+                                            </div>
 
 
-                                        <div class="col-md-6">
-                                            <input type="text" class="form-control" placeholder="Nama Lengkap" name="name">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <input type="text" class="form-control" placeholder="NIK" name="nik">
-                                        </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Nama Lengkap" name="name">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="NIK" name="nik">
+                                            </div>
 
-								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir">
-								</div>
-								<div class="col-md-6">
-									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir">
-								</div>
-								{{--  <div class="col-md-6">
-									<input class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" type="date" name="date-123">
-								</div>  --}}
-								<div class="col-md-6">
-									<select class="form-select form-control" name="jenis_kelamin" aria-label="Default select example">
-										<option disabled selected	>Jenis Kelamin</option>
-										<option value="jenis_kelamin">Laki - Laki</option>
-										<option value="jenis_kelamin">Perempuan</option>
-
-
-                                            </select>
-                                        </div>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir">
+                                    </div>
+                                    {{--  <div class="col-md-6">
+                                        <input class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" type="date" name="date-123">
+                                    </div>  --}}
+                                    <div class="col-md-6">
+                                        <select class="form-select form-control" name="jenis_kelamin" aria-label="Default select example">
+                                            <option disabled selected	>Jenis Kelamin</option>
+                                            <option value="Laki-Laki">Laki - Laki</option>
+                                            <option value="Perempuan">Perempuan</option>
 
 
-                                        <div class="col-md-6">
-                                            <input type="text" class="form-control" placeholder="Pekerjaan"
-                                                name="pekerjaan">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <input type="text" class="form-control" placeholder="Alamat Sekarang"
-                                                name="alamat">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="formFile" class="form-label">Upload Foto KTP :</label>
-                                            <input class="" type="file" id="formFile" name="foto_ktp">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="formFile" class="form-label">Upload Foto Akta Kelahiran :</label>
-                                            <input class="" type="file" id="formFile" name="foto_akta">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="formFile" class="form-label">Upload Foto KK :</label>
-                                            <input class="" type="file" id="formFile" name="foto_kk">
-                                        </div>
+                                                </select>
+                                            </div>
 
-								<div class="col-md-12 mt-4">
-									<button class="pbmit-btn">
-										<span class="pbmit-button-text" name="submit">Kirim</span>
-										<span class="pbmit-button-icon-wrapper">
-											<span class="pbmit-button-icon">
-												<i class="pbmit-base-icon-black-arrow-1"></i>
-											</span>
-										</span>
-									</button>
-								</div>
-							</div>
-                        </div>
-                            {{--  Surat Rekomendasi  --}}
-                        <div class="form-container" id="form-11">
-                            <div class="row ">
-								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Nama Lengkap" name="name">
-								</div>
-								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="NIK" name="nik">
-								</div>
-								<div class="col-md-6">
-									<input type="tel" class="form-control" placeholder="No Whatsapp" name="whatsapp">
-								</div>
-								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir">
-								</div>
-								<div class="col-md-6">
-									<input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir">
-								</div>
-								{{--  <div class="col-md-6">
-									<input class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" type="date" name="date-123">
-								</div>  --}}
-								<div class="col-md-6">
-									<select class="form-select form-control" name="jenis_kelamin" aria-label="Default select example">
-										<option disabled selected	>Jenis Kelamin</option>
-										<option value="jenis_kelamin">Laki - Laki</option>
-										<option value="jenis_kelamin">Perempuan</option>
 
-										
-									</select>
-								</div>
-								<div class="col-md-6">
-									<select class="form-select form-control" name="warganegara" aria-label="Default select example">
-										<option disabled selected	>Warganegara</option>
-										<option value="warganegara">WNI</option>
-										<option value="warganegara">WNA</option>
-									</select>
-								</div>
-								<div class="col-md-6">
-									<select class="form-select form-control" name="agama" aria-label="Default select example">
-										<option disabled selected	>Pilih Agama</option>
-										<option value="agama">Islam</option>
-										<option value="agama">Kristen</option>
-										<option value="agama">Buddha</option>
-										<option value="agama">Hindu</option>
-										<option value="agama">Kong Hu Cu</option>
-									</select>
-								</div>
-								
-								
-								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Pekerjaan" name="pekerjaan">
-								</div>
-								
-								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Alamat Sekarang" name="alamat">
-								</div>
-								<div class="col-md-6">
-									<input type="text" class="form-control" placeholder="Tujuan Surat" name="tujuan_surat">
-								</div>
-								<div class="col-md-6">
-									<label for="formFile" class="form-label">Upload Foto KTP :</label>
-  									<input class="" type="file" id="formFile" name="foto_ktp">
-								</div>
-								
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Pekerjaan"
+                                                    name="pekerjaan">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Alamat Sekarang"
+                                                    name="alamat">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="formFile" class="form-label">Upload Foto KTP :</label>
+                                                <input class="" type="file" id="formFile" name="foto_ktp">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="formFile" class="form-label">Upload Foto Akta Kelahiran :</label>
+                                                <input class="" type="file" id="formFile" name="foto_akta">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="formFile" class="form-label">Upload Foto KK :</label>
+                                                <input class="" type="file" id="formFile" name="foto_kk">
+                                            </div>
 
-                                        <div class="col-md-12 mt-4">
-                                            <button class="pbmit-btn" type="submit">
-                                                <span class="pbmit-button-text" name="submit">Kirim</span>
-                                                <span class="pbmit-button-icon-wrapper">
-                                                    <span class="pbmit-button-icon">
-                                                        <i class="pbmit-base-icon-black-arrow-1"></i>
-                                                    </span>
+                                    <div class="col-md-12 mt-4">
+                                        <button class="pbmit-btn">
+                                            <span class="pbmit-button-text" name="submit">Kirim</span>
+                                            <span class="pbmit-button-icon-wrapper">
+                                                <span class="pbmit-button-icon">
+                                                    <i class="pbmit-base-icon-black-arrow-1"></i>
                                                 </span>
-                                            </button>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            {{--  Surat Rekomendasi  --}}
+                            <div class="form-container" id="form-11">
+                                <div class="row ">
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="Nama Lengkap" name="name">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="NIK" name="nik">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="tel" class="form-control" placeholder="No Whatsapp" name="whatsapp">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="date" class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir" name="tanggal_lahir">
+                                    </div>
+                                    {{--  <div class="col-md-6">
+                                        <input class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" type="date" name="date-123">
+                                    </div>  --}}
+                                    <div class="col-md-6">
+                                        <select class="form-select form-control" name="jenis_kelamin" aria-label="Default select example">
+                                            <option disabled selected	>Jenis Kelamin</option>
+                                            <option value="Laki-Laki">Laki - Laki</option>
+                                            <option value="Perempuan">Perempuan</option>
+
+                                            
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <select class="form-select form-control" name="warganegara" aria-label="Default select example">
+                                            <option disabled selected	>Warganegara</option>
+                                            <option value="warganegara">WNI</option>
+                                            <option value="warganegara">WNA</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <select class="form-select form-control" name="agama" aria-label="Default select example">
+                                            <option disabled selected	>Pilih Agama</option>
+                                            <option value="agama">Islam</option>
+                                            <option value="agama">Kristen</option>
+                                            <option value="agama">Buddha</option>
+                                            <option value="agama">Hindu</option>
+                                            <option value="agama">Kong Hu Cu</option>
+                                        </select>
+                                    </div>
+                                    
+                                    
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="Pekerjaan" name="pekerjaan">
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="Alamat Sekarang" name="alamat">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="Tujuan Surat" name="tujuan_surat">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="formFile" class="form-label">Upload Foto KTP :</label>
+                                        <input class="" type="file" id="formFile" name="foto_ktp">
+                                    </div>
+                                    
+
+                                            <div class="col-md-12 mt-4">
+                                                <button class="pbmit-btn" type="submit">
+                                                    <span class="pbmit-button-text" name="submit">Kirim</span>
+                                                    <span class="pbmit-button-icon-wrapper">
+                                                        <span class="pbmit-button-icon">
+                                                            <i class="pbmit-base-icon-black-arrow-1"></i>
+                                                        </span>
+                                                    </span>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-
+                            </div>
                         </form>
 
 

@@ -59,7 +59,7 @@
 								<div class="pbmit-featured-wrap">
 									<div class="pbmit-featured-img-wrapper">
 										<div class="pbmit-featured-wrapper">
-											<img src="{{ asset('storage/img/pegawai/' . $pegawai->foto) }}" class="img-fluid" alt="">
+											<img src="{{ asset('storage/img/pegawai/' . $pegawai->foto) }}" style="width: 300px; height:400px;" class="img-fluid" alt="">
 											
 										</div>
 									</div>

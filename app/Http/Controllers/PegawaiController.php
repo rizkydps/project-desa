@@ -87,6 +87,14 @@ class PegawaiController extends Controller
         return redirect()->route('dashboard.pegawai.index')
             ->with('success', 'Data Pegawai berhasil ditambahkan.');
     }
+
+    public function destroy(Pegawai $pegawai)
+    {
+        $pegawai->delete();
+
+        return redirect()->route('dashboard.pegawai.index')
+            ->with('success', 'Data Pegawai berhasil dihapus.');
+    }
     
     
 }
