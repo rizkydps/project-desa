@@ -82,8 +82,12 @@
 
                             <td>
                                  {{--  {{ route('dashboard.surat.cetak_surat', ['slug' => $permintaan->slug]) }}  --}}
-                                <a href=""><button type="button" class="btn btn-danger"><i
-                                    class="fas fa-print"></i></button></a>
+                                 <a href="{{ route('dashboard.surat.cetak_pdf', ['kategori_surat' => $permintaan->kategori_surat]) }}">
+                                    <button type="button" class="btn btn-danger">
+                                        <i class="fas fa-print"></i>
+                                    </button>
+                                </a>
+                                
                                 @php
                                 $wa = '62' . substr($permintaan->whatsapp,1);
                                 $wa = intval($wa);

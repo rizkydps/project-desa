@@ -132,31 +132,31 @@
                     <tr>
                         <td>Nama</td>
                         <td>:</td>
-                        <td>KKN DESA SIDOMULYO</td>
+                        <td>{{ $surat->name }}</td>
                     </tr>
                     <tr>
                         <td>Tempat, Tanggal Lahir</td>
                         <td>:</td>
-                        <td>Wasaga, 2-10-2004</td>
+                        <td>{{ $surat->tempat_lahir }},{{ $surat->tanggal_lahir }}</td>
                     </tr>
                     <tr>
                         <td>Agama</td>
                         <td>:</td>
-                        <td>Islam</td>
+                        <td>{{ $surat->agama }}</td>
                     </tr>
                     <tr>
                         <td>Kewarganegaraan</td>
                         <td>:</td>
-                        <td>WNI</td>
+                        <td>{{ $surat->warganegara }}</td>
                     </tr>
                     <tr>
                         <td>No.KTP</td>
                         <td>:</td>
-                        <td></td>
+                        <td>{{ $surat->nik }}</td>
                     </tr>
                     <td>Alamat</td>
                     <td>:</td>
-                    <td>Desa Terong Tanah RT.RW. Kecamatan Pasarwajo</td>
+                    <td>{{ $surat->alamat }}</td>
                 </tr>
                 <br>
                     <tr>

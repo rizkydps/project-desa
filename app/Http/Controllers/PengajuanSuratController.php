@@ -86,6 +86,8 @@ class PengajuanSuratController extends Controller
         //$surat->nomer_surat = $request->nomer_surat;
 
         $surat->whatsapp = $request->whatsapp;
+        $surat->nomer_surat = $request->nomer_surat;
+
         $surat->name = $request->name;
         $surat->nik = $request->nik;
         $surat->tempat_lahir = $request->tempat_lahir;
@@ -108,6 +110,8 @@ class PengajuanSuratController extends Controller
         $surat->tahun_mulai = $request->tahun_mulai;
         $surat->hari_lahir = $request->hari_lahir;
         $surat->jam_waktu = $request->jam_waktu;
+        $surat->slug = $request->slug;
+
         $surat->foto_ktp = $picture_name_ktp; // img
         $surat->foto_kk = $picture_name_kk; // img
         $surat->foto_akta = $picture_name_akta; // img

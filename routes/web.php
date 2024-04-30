@@ -83,7 +83,9 @@ Route::get('/formulir-sukses', [PengajuanSuratController::class, 'success'])->na
 
     Route::resource('surat', SuratController::class, ['names' => 'dashboard.surat']);
     Route::get('/surats/records', [SuratController::class, 'data_table'])->name('dashboard.surat.records');
-    Route::get('/cetak-surat/{slug}', [SuratController::class, 'cetak_pdf'])->name('dashboard.surat.cetak_pdf');
+    Route::get('/surats/cetak-surat/{kategori_surat}', [SuratController::class, 'cetak_pdf'])->name('dashboard.surat.cetak_pdf');
+
+
 
     
 
