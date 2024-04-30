@@ -14,3 +14,4 @@
 
     <!-- Page level custom scripts -->
     <script src="{{ asset ('admin/js/demo/datatables-demo.js') }}"></script>
+    

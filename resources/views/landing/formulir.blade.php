@@ -100,19 +100,19 @@
                                         <select class="form-select form-control" name="warganegara"
                                             aria-label="Default select example">
                                             <option disabled selected>Warganegara</option>
-                                            <option value="warganegara">WNI</option>
-                                            <option value="warganegara">WNA</option>
+                                            <option value="WNI">Warga Negara Indonesia</option>
+                                            <option value="WNA">Warga Negara Asing</option>
                                         </select>
                                     </div>
                                     <div class="col-md-6">
                                         <select class="form-select form-control" name="agama"
                                             aria-label="Default select example">
                                             <option disabled selected>Pilih Agama</option>
-                                            <option value="agama">Islam</option>
-                                            <option value="agama">Kristen</option>
-                                            <option value="agama">Buddha</option>
-                                            <option value="agama">Hindu</option>
-                                            <option value="agama">Kong Hu Cu</option>
+                                            <option value="Islam">Islam</option>
+                                            <option value="Kristen">Kristen</option>
+                                            <option value="Buddha">Buddha</option>
+                                            <option value="Hindu">Hindu</option>
+                                            <option value="Kong Hu Cu">Kong Hu Cu</option>
                                         </select>
                                     </div>
 
@@ -125,8 +125,8 @@
                                         <select class="form-select form-control" name="status_pernikahan"
                                             aria-label="Default select example">
                                             <option disabled selected>Status Pernikahan</option>
-                                            <option value="status_pernikahan">Sudah Menikah</option>
-                                            <option value="status_pernikahan">Belum Menikah</option>
+                                            <option value="Sudah Menikah">Sudah Menikah</option>
+                                            <option value="Belum Menikah">Belum Menikah</option>
                                         </select>
                                     </div>
                                     <div class="col-md-6">
@@ -206,19 +206,19 @@
                                         <select class="form-select form-control" name="warganegara"
                                             aria-label="Default select example">
                                             <option disabled selected>Warganegara</option>
-                                            <option value="warganegara">WNI</option>
-                                            <option value="warganegara">WNA</option>
+                                            <option value="WNI">Warga Negara Indonesia</option>
+                                            <option value="WNA">Warga Negara Asing</option>
                                         </select>
                                     </div>
                                     <div class="col-md-6">
                                         <select class="form-select form-control" name="agama"
                                             aria-label="Default select example">
                                             <option disabled selected>Pilih Agama</option>
-                                            <option value="agama">Islam</option>
-                                            <option value="agama">Kristen</option>
-                                            <option value="agama">Buddha</option>
-                                            <option value="agama">Hindu</option>
-                                            <option value="agama">Kong Hu Cu</option>
+                                            <option value="Islam">Islam</option>
+                                            <option value="Kristen">Kristen</option>
+                                            <option value="Buddha">Buddha</option>
+                                            <option value="Hindu">Hindu</option>
+                                            <option value="Kong Hu Cu">Kong Hu Cu</option>
                                         </select>
                                     </div>
 
@@ -231,8 +231,8 @@
                                         <select class="form-select form-control" name="status_pernikahan"
                                             aria-label="Default select example">
                                             <option disabled selected>Status Pernikahan</option>
-                                            <option value="status_pernikahan">Sudah Menikah</option>
-                                            <option value="status_pernikahan">Belum Menikah</option>
+                                            <option value="Sudah Menikah">Sudah Menikah</option>
+                                            <option value="Belum Menikah">Belum Menikah</option>
                                         </select>
                                     </div>
                                     <div class="col-md-6">
@@ -304,12 +304,12 @@
                                     <div class="col-md-6">
                                         <select class="form-select form-control" name="agama"
                                             aria-label="Default select example">
-                                            <option disabled selected>Pilih Agama Suami</option>
-                                            <option value="agama">Islam</option>
-                                            <option value="agama">Kristen</option>
-                                            <option value="agama">Buddha</option>
-                                            <option value="agama">Hindu</option>
-                                            <option value="agama">Kong Hu Cu</option>
+                                            <option disabled selected>Pilih Agama</option>
+                                            <option value="Islam">Islam</option>
+                                            <option value="Kristen">Kristen</option>
+                                            <option value="Buddha">Buddha</option>
+                                            <option value="Hindu">Hindu</option>
+                                            <option value="Kong Hu Cu">Kong Hu Cu</option>
                                         </select>
                                     </div>
 
@@ -334,12 +334,12 @@
                                     <div class="col-md-6">
                                         <select class="form-select form-control" name="agama"
                                             aria-label="Default select example">
-                                            <option disabled selected>Pilih Agama Istri</option>
-                                            <option value="agama">Islam</option>
-                                            <option value="agama">Kristen</option>
-                                            <option value="agama">Buddha</option>
-                                            <option value="agama">Hindu</option>
-                                            <option value="agama">Kong Hu Cu</option>
+                                            <option disabled selected>Pilih Agama</option>
+                                            <option value="Islam">Islam</option>
+                                            <option value="Kristen">Kristen</option>
+                                            <option value="Buddha">Buddha</option>
+                                            <option value="Hindu">Hindu</option>
+                                            <option value="Kong Hu Cu">Kong Hu Cu</option>
                                         </select>
                                     </div>
 
@@ -580,11 +580,11 @@
                                         <select class="form-select form-control" name="agama"
                                             aria-label="Default select example">
                                             <option disabled selected>Pilih Agama</option>
-                                            <option value="agama">Islam</option>
-                                            <option value="agama">Kristen</option>
-                                            <option value="agama">Buddha</option>
-                                            <option value="agama">Hindu</option>
-                                            <option value="agama">Kong Hu Cu</option>
+                                            <option value="Islam">Islam</option>
+                                            <option value="Kristen">Kristen</option>
+                                            <option value="Buddha">Buddha</option>
+                                            <option value="Hindu">Hindu</option>
+                                            <option value="Kong Hu Cu">Kong Hu Cu</option>
                                         </select>
                                     </div>
 
@@ -597,8 +597,8 @@
                                         <select class="form-select form-control" name="status_pernikahan"
                                             aria-label="Default select example">
                                             <option disabled selected>Status Pernikahan</option>
-                                            <option value="status_pernikahan">Sudah Menikah</option>
-                                            <option value="status_pernikahan">Belum Menikah</option>
+                                            <option value="Sudah Menikah">Sudah Menikah</option>
+                                            <option value="Belum Menikah">Belum Menikah</option>
                                         </select>
                                     </div>
                                     <div class="col-md-6">
@@ -681,19 +681,19 @@
                                         <select class="form-select form-control" name="warganegara"
                                             aria-label="Default select example">
                                             <option disabled selected>Warganegara</option>
-                                            <option value="warganegara">WNI</option>
-                                            <option value="warganegara">WNA</option>
+                                            <option value="WNI">Warga Negara Indonesia</option>
+                                            <option value="WNA">Warga Negara Asing</option>
                                         </select>
                                     </div>
                                     <div class="col-md-6">
                                         <select class="form-select form-control" name="agama"
                                             aria-label="Default select example">
                                             <option disabled selected>Pilih Agama</option>
-                                            <option value="agama">Islam</option>
-                                            <option value="agama">Kristen</option>
-                                            <option value="agama">Buddha</option>
-                                            <option value="agama">Hindu</option>
-                                            <option value="agama">Kong Hu Cu</option>
+                                            <option value="Islam">Islam</option>
+                                            <option value="Kristen">Kristen</option>
+                                            <option value="Buddha">Buddha</option>
+                                            <option value="Hindu">Hindu</option>
+                                            <option value="Kong Hu Cu">Kong Hu Cu</option>
                                         </select>
                                     </div>
 
@@ -706,8 +706,8 @@
                                         <select class="form-select form-control" name="status_pernikahan"
                                             aria-label="Default select example">
                                             <option disabled selected>Status Pernikahan</option>
-                                            <option value="status_pernikahan">Sudah Menikah</option>
-                                            <option value="status_pernikahan">Belum Menikah</option>
+                                            <option value="Sudah Menikah">Sudah Menikah</option>
+                                            <option value="Belum Menikah">Belum Menikah</option>
                                         </select>
                                     </div>
                                     <div class="col-md-6">
@@ -784,19 +784,19 @@
                                         <select class="form-select form-control" name="warganegara"
                                             aria-label="Default select example">
                                             <option disabled selected>Warganegara</option>
-                                            <option value="warganegara">WNI</option>
-                                            <option value="warganegara">WNA</option>
+                                            <option value="WNI">Warga Negara Indonesia</option>
+                                            <option value="WNA">Warga Negara Asing</option>
                                         </select>
                                     </div>
                                     <div class="col-md-6">
                                         <select class="form-select form-control" name="agama"
                                             aria-label="Default select example">
                                             <option disabled selected>Pilih Agama</option>
-                                            <option value="agama">Islam</option>
-                                            <option value="agama">Kristen</option>
-                                            <option value="agama">Buddha</option>
-                                            <option value="agama">Hindu</option>
-                                            <option value="agama">Kong Hu Cu</option>
+                                            <option value="Islam">Islam</option>
+                                            <option value="Kristen">Kristen</option>
+                                            <option value="Buddha">Buddha</option>
+                                            <option value="Hindu">Hindu</option>
+                                            <option value="Kong Hu Cu">Kong Hu Cu</option>
                                         </select>
                                     </div>
 
@@ -809,8 +809,8 @@
                                         <select class="form-select form-control" name="status_pernikahan"
                                             aria-label="Default select example">
                                             <option disabled selected>Status Pernikahan</option>
-                                            <option value="status_pernikahan">Sudah Menikah</option>
-                                            <option value="status_pernikahan">Belum Menikah</option>
+                                            <option value="Sudah Menikah">Sudah Menikah</option>
+                                            <option value="Belum Menikah">Belum Menikah</option>
                                         </select>
                                     </div>
                                     <div class="col-md-6">
@@ -894,19 +894,19 @@
                                         <select class="form-select form-control" name="warganegara"
                                             aria-label="Default select example">
                                             <option disabled selected>Warganegara</option>
-                                            <option value="warganegara">WNI</option>
-                                            <option value="warganegara">WNA</option>
+                                            <option value="WNI">Warga Negara Indonesia</option>
+                                            <option value="WNA">Warga Negara Asing</option>
                                         </select>
                                     </div>
                                     <div class="col-md-6">
                                         <select class="form-select form-control" name="agama"
                                             aria-label="Default select example">
                                             <option disabled selected>Pilih Agama</option>
-                                            <option value="agama">Islam</option>
-                                            <option value="agama">Kristen</option>
-                                            <option value="agama">Buddha</option>
-                                            <option value="agama">Hindu</option>
-                                            <option value="agama">Kong Hu Cu</option>
+                                            <option value="Islam">Islam</option>
+                                            <option value="Kristen">Kristen</option>
+                                            <option value="Buddha">Buddha</option>
+                                            <option value="Hindu">Hindu</option>
+                                            <option value="Kong Hu Cu">Kong Hu Cu</option>
                                         </select>
                                     </div>
 
@@ -986,8 +986,6 @@
                                             <option disabled selected>Jenis Kelamin</option>
                                             <option value="Laki-Laki">Laki - Laki</option>
                                             <option value="Perempuan">Perempuan</option>
-
-
                                         </select>
                                     </div>
 
@@ -1028,8 +1026,6 @@
                                             <option disabled selected>Jenis Kelamin</option>
                                             <option value="Laki-Laki">Laki - Laki</option>
                                             <option value="Perempuan">Perempuan</option>
-
-
                                         </select>
                                     </div>
 
@@ -1099,27 +1095,25 @@
                                             <option disabled selected>Jenis Kelamin</option>
                                             <option value="Laki-Laki">Laki - Laki</option>
                                             <option value="Perempuan">Perempuan</option>
-
-
                                         </select>
                                     </div>
                                     <div class="col-md-6">
                                         <select class="form-select form-control" name="warganegara"
                                             aria-label="Default select example">
                                             <option disabled selected>Warganegara</option>
-                                            <option value="warganegara">WNI</option>
-                                            <option value="warganegara">WNA</option>
+                                            <option value="WNI">Warga Negara Indonesia</option>
+                                            <option value="WNA">Warga Negara Asing</option>
                                         </select>
                                     </div>
                                     <div class="col-md-6">
                                         <select class="form-select form-control" name="agama"
                                             aria-label="Default select example">
                                             <option disabled selected>Pilih Agama</option>
-                                            <option value="agama">Islam</option>
-                                            <option value="agama">Kristen</option>
-                                            <option value="agama">Buddha</option>
-                                            <option value="agama">Hindu</option>
-                                            <option value="agama">Kong Hu Cu</option>
+                                            <option value="Islam">Islam</option>
+                                            <option value="Kristen">Kristen</option>
+                                            <option value="Buddha">Buddha</option>
+                                            <option value="Hindu">Hindu</option>
+                                            <option value="Kong Hu Cu">Kong Hu Cu</option>
                                         </select>
                                     </div>
 

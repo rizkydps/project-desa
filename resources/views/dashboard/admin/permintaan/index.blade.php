@@ -48,7 +48,7 @@
                                                     11 => 'Surat Rekomendasi'
                                                 ];
                                                 @endphp
-                                                {{ $categories[$permintaan->kategori_surat] ?? 'Tidak Di ketahui' }}
+                                                {{ $categories[$permintaan->kategori_surat] ?? 'Tidak Di Ketahui' }}
                                             </td>
                                             
 
