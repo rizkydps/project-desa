@@ -71,7 +71,7 @@
 
 
                             <td><span class="btn btn-success">
-                                    @if($permintaan->status == 0)
+                                    @if($permintaan->status = 1)
                                     Menunggu Setujui
                                     @elseif($permintaan->status = 1)
                                     DiTerima
@@ -81,6 +81,7 @@
                                 </span></td>
 
                             <td>
+                                 {{--  {{ route('dashboard.surat.cetak_surat', ['slug' => $permintaan->slug]) }}  --}}
                                 <a href=""><button type="button" class="btn btn-danger"><i
                                     class="fas fa-print"></i></button></a>
                                 @php
@@ -106,6 +107,7 @@
     </div>
 
 </div>
+
 
 
 @endsection

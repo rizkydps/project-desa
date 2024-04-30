@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use Dompdf\Dompdf;
+use Dompdf\Options;
+
 use App\Models\KategoriSurat;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
-
+use Barryvdh\DomPDF\Facade\Pdf;
 use App\Models\Surat;
 class SuratController extends Controller
 {
@@ -34,6 +37,23 @@ class SuratController extends Controller
                 ->make(true);
 
     }
+
+    public function cetak_pdf($slug)
+{
+    $surat = Surat::where('slug', $slug)->where('status', '1')->firstOrFail();
+    $viewName = 'dashboard.admin.cetak_surat.'.$surat->jenis; // $surat->jenis adalah nama file blade yang sesuai dengan jenis surat
+    if (!view()->exists($viewName)) {
+        abort(404);
+    }
+
+    $pdf = new Dompdf();
+    $pdf->loadHtml(view($viewName, compact('surat'))->render());
+    $pdf->setPaper('A4', 'portrait');
+    $pdf->render();
+
+    return $pdf->stream($surat->jenis.'.pdf');
+}
+
 
     
 

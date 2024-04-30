@@ -2,12 +2,12 @@
 <html>
 <style>
 
-@media print{
+{{--  @media print{
             @page {
                 margin-top: 30px;
                 margin-bottom: 30px;
             }
-            }
+            }  --}}
     .surat-wrapper {
         margin: 0 auto;
         max-width: 1240px;
@@ -97,7 +97,7 @@
     <title>Surat</title>
 </head>
 
-<body onload="window.print()">
+<body >
     <div class="surat-wrapper">
         <header class="header-wrapper">
             <img style="float: left; margin: 0px 15px 15px 0px;" src="images/kal.png" width="100" />
@@ -132,7 +132,7 @@
                     <tr>
                         <td>Nama</td>
                         <td>:</td>
-                        <td>KKN DESA SIDOMULYO</td>
+                        <td>{{ $surat->name }}</td>
                     </tr>
                     <tr>
                         <td>NIK</td>
