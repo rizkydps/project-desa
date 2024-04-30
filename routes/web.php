@@ -76,12 +76,14 @@ Route::get('/formulir-sukses', [PengajuanSuratController::class, 'success'])->na
     Route::resource('kategori-surat', KategoriSuratController::class);
     Route::resource('/users', UserController::class, ['names' => 'dashboard.users']);
     Route::resource('/pegawai', PegawaiController::class, ['names' => 'dashboard.pegawai']);
+    Route::resource('/buat-berita', BlogController::class, ['names' => 'dashboard.berita']);
+
 
 
 
     Route::resource('surat', SuratController::class, ['names' => 'dashboard.surat']);
     Route::get('/surats/records', [SuratController::class, 'data_table'])->name('dashboard.surat.records');
-    Route::get('/cetak-surat/{slug}', [SuratController::class, 'cetak_pdf'])->name('dashboard.surat.cetak_surat');
+    Route::get('/cetak-surat/{slug}', [SuratController::class, 'cetak_pdf'])->name('dashboard.surat.cetak_pdf');
 
     
 

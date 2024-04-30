@@ -53,7 +53,7 @@ return new class extends Migration
             $table->string('foto_bukti')->nullable();
             $table->string('foto_pengantar')->nullable();
             $table->string('status')->default('0');
-            $table->string('slug');
+            $table->string('slug')->nullable();
             $table->foreignId('kategori_surat')->references('id')->on('kategori_surat')->onDelete('cascade');
             $table->timestamps();
         });
