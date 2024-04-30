@@ -41,28 +41,24 @@ class SuratController extends Controller
 
     public function cetak_pdf($kategori_surat_id)
     {
-        // Cari surat berdasarkan kategori_surat_id
-        $surat = Surat::where('kategori_surat', $kategori_surat_id)->where('status', 1)->firstOrFail();
+     // Cari surat berdasarkan kategori_surat_id
+    $surat = Surat::where('kategori_surat', $kategori_surat_id)->where('status', 1)->firstOrFail();
     
-        // Ambil nama kategori surat
-        $kategori_surat = KategoriSurat::findOrFail($kategori_surat_id);
+    // Ambil data kategori surat
+    $kategori_surat = KategoriSurat::findOrFail($kategori_surat_id);
     
-        // Tentukan nama file template berdasarkan jenis surat
-        $viewName = 'dashboard.admin.cetak_surat.' . strtolower(str_replace(' ', '_', $kategori_surat->name));
+    // Tentukan nama file template berdasarkan jenis surat
+    $viewName = 'dashboard.admin.cetak_surat.' . strtolower(str_replace(' ', '_', $kategori_surat->name));
     
-        // Periksa apakah template ada
-        if (!view()->exists($viewName)) {
-            abort(404);
-        }
-    
-        // Buat PDF dari template yang sesuai
-        $pdf = new Dompdf();
-        $pdf->loadHtml(view($viewName, compact('surat'))->render());
-        $pdf->setPaper('A4', 'portrait');
-        $pdf->render();
-    
-        return $pdf->stream($kategori_surat->name . '.pdf');
+    // Periksa apakah template ada
+    if (!view()->exists($viewName)) {
+        abort(404);
     }
+    
+    // Tampilkan template surat langsung di browser
+    return view($viewName, compact('surat'));
+    }
+    
 
 
 

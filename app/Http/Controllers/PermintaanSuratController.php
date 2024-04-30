@@ -22,37 +22,37 @@ class PermintaanSuratController extends Controller
 
         if($surat->kategori_surat == 1)
         {
-            return view('dashboard.admin.cetak.domisili', compact('surat'));
+            return view('dashboard.admin.detail_surat.domisili', compact('surat'));
         }
         elseif($surat->kategori_surat == 2) {
-            return view('dashboard.admin.cetak.pindah', compact('surat'));
+            return view('dashboard.admin.detail_surat.pindah', compact('surat'));
         }
         elseif($surat->kategori_surat == 3) {
-            return view('dashboard.admin.cetak.pengantar-nikah', compact('surat'));
+            return view('dashboard.admin.detail_surat.pengantar-nikah', compact('surat'));
         }
         elseif($surat->kategori_surat == 4) {
-            return view('dashboard.admin.cetak.kematian', compact('surat'));
+            return view('dashboard.admin.detail_surat.kematian', compact('surat'));
         }
         elseif($surat->kategori_surat == 5) {
-            return view('dashboard.admin.cetak.kelahiran', compact('surat'));
+            return view('dashboard.admin.detail_surat.kelahiran', compact('surat'));
         }
         elseif($surat->kategori_surat == 6) {
-            return view('dashboard.admin.cetak.ijin-keramaian', compact('surat'));
+            return view('dashboard.admin.detail_surat.ijin-keramaian', compact('surat'));
         }
         elseif($surat->kategori_surat == 7) {
-            return view('dashboard.admin.cetak.ktm', compact('surat'));
+            return view('dashboard.admin.detail_surat.sktm', compact('surat'));
         }
         elseif($surat->kategori_surat == 8) {
-            return view('dashboard.admin.cetak.usaha', compact('surat'));
+            return view('dashboard.admin.detail_surat.usaha', compact('surat'));
         }
         elseif($surat->kategori_surat == 9) {
-            return view('dashboard.admin.cetak.kehilangan', compact('surat'));
+            return view('dashboard.admin.detail_surat.kehilangan', compact('surat'));
         }
         elseif($surat->kategori_surat == 10) {
-            return view('dashboard.admin.cetak.orangyangsama', compact('surat'));
+            return view('dashboard.admin.detail_surat.orangyangsama', compact('surat'));
         }
         elseif($surat->kategori_surat ==11) {
-            return view('dashboard.admin.cetak.rekomendasi', compact('surat'));
+            return view('dashboard.admin.detail_surat.rekomendasi', compact('surat'));
         }
         // return view('dashboard.admin.permintaan.show', compact('surat'));
     }

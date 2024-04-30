@@ -116,7 +116,7 @@
 
         <div id="details" class="clearfix">
             <div id="lampiran">
-                <div>Nomor : -</div>
+                <div>Nomor : {{ $surat->nomer_surat }}</div>
                 
             </div>
            
@@ -132,52 +132,52 @@
                     <tr>
                         <td>Nama</td>
                         <td>:</td>
-                        <td>yoto</td>
+                        <td>{{ $surat->name }}</td>
                     </tr>
                     <tr>
                         <td>Jenis kelamin</td>
                         <td>:</td>
-                        <td>laki-laki</td>
+                        <td>{{ $surat->jenis_kelamin }}</td>
                     </tr>
                     <tr>
                         <td>Tempat/Tanggal lahir</td>
                         <td>:</td>
-                        <td>samarinda 01-mei-1945</td>
+                        <td>{{ $surat->tempat_lahir }},{{ $surat->tanggal_lahir }}</td>
                     </tr>
                     <tr>
-                        <td>pekerjaan</td>
+                        <td>Pekerjaan</td>
                         <td>:</td>
-                        <td>petani</td>
+                        <td>{{ $surat->pekerjaan }}</td>
                     </tr>
                     <tr>
-                        <td>kewarganegaraan</td>
+                        <td>Kewarganegaraan</td>
                         <td>:</td>
-                        <td>indonesia</td>
+                        <td>{{ $surat->warganegara }}</td>
                     </tr>
                     <tr>
                         <td>Status Perkawinan</td>
                         <td>:</td>
-                        <td>belum menikah</td>
+                        <td>{{ $surat->status_pernikahan }}</td>
                     </tr>
                     <tr>
                         <td>NO NIK</td>
                         <td>:</td>
-                        <td>987453729</td>
+                        <td>{{ $surat->nik }}</td>
                     </tr>
                     <tr>
                         <td>RT/RW</td>
                         <td>:</td>
-                        <td>14/17</td>
+                        <td>{{ $surat->name }}</td>
                     </tr>
                     <tr>
                         <td>Agama</td>
                         <td>:</td>
-                        <td>islam</td>
+                        <td>{{ $surat->agama }}</td>
                     </tr>
                     <tr>
                         <td>Alamat Tinggal</td>
                         <td>:</td>
-                        <td>sidomulyo</td>
+                        <td>{{ $surat->alamat }}</td>
                     </tr>
                    
                     
@@ -189,7 +189,7 @@
         <div>Warga tersebut adalah benar penduduk desa sidomulyo anggana yang bertempat tinggal di alamat diatas :</div>
         <div id="data-lurah-pengaju">
         <div>Berdasarkan pengantar dari ketua RT/RW setempat yang menurut sepengetahuan kami,bahwa benar yang bersangkutantergolong orang tidak mampu/miskin.</div>
-         <div>"Surat keterangan ini  diberikan untuk mendapatkan Bantuan Beasiswa"</div>   
+         <div>"Surat keterangan ini  diberikan untuk mendapatkan Bantuan {{ $surat->tujuan_surat }}"</div>   
          <div>Demikian surat ini diberikan kepada yang bersangkutan agar dapat dipergunakan sebagaimana mestinya.</div>   
         <table>
                 
