@@ -39,12 +39,13 @@ class SuratController extends Controller
 
     }
 
-    public function cetak_pdf($kategori_surat_id)
-    {
-     // Cari surat berdasarkan kategori_surat_id
-    $surat = Surat::where('kategori_surat', $kategori_surat_id)->where('status', 1)->firstOrFail();
+    public function cetak_pdf($id)
+{
+    // Cari surat berdasarkan id
+    $surat = Surat::findOrFail($id);
     
-    // Ambil data kategori surat
+    // Ambil kategori surat
+    $kategori_surat_id = $surat->kategori_surat;
     $kategori_surat = KategoriSurat::findOrFail($kategori_surat_id);
     
     // Tentukan nama file template berdasarkan jenis surat
@@ -57,7 +58,8 @@ class SuratController extends Controller
     
     // Tampilkan template surat langsung di browser
     return view($viewName, compact('surat'));
-    }
+}
+
     
 
 

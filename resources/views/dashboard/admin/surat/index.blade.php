@@ -82,8 +82,8 @@
 
                             <td>
                                  {{--  {{ route('dashboard.surat.cetak_surat', ['slug' => $permintaan->slug]) }}  --}}
-                                 <a  target="_blank" href="{{ route('dashboard.surat.cetak_pdf', ['kategori_surat' => $permintaan->kategori_surat]) }}">
-                                    <button type="button"  class="btn btn-danger">
+                                 <a target="_blank" href="{{ route('dashboard.surat.cetak_pdf', ['id' => $permintaan->id]) }}">
+                                    <button type="button" class="btn btn-danger">
                                         <i class="fas fa-print"></i>
                                     </button>
                                 </a>
