@@ -22,41 +22,45 @@ class SuratController extends Controller
     }
    
 
-   public function data_table()
+    public function data_table(Request $request)
     {
-        $query = Surat::with('kategori_surat')->orderBy('created_at','asc');
+        $query = Surat::with('kategori')->where('status', 1)->orderBy('created_at', 'desc');
+        
+        if($request->kategori_surat){
+            $query->where('kategori_surat', $request->kategori_surat);
+        }
+
         return DataTables::of($query)
-                ->addColumn('options', function ($row){
-                    return '
-                    <a href="' . route('dashboard.surat.show', $row->id) . '" class="btn btn-sm btn-warning"><i class="fa fa-eye"></i></a>
-                    <a href="' . route('dashboard.surat.edit', $row->id) . '" class="btn btn-sm btn-primary"><i class="fa fa-pen"></i></a>
-                    <button data-id="' . $row['id'] . '" class="btn btn-sm btn-danger" id="btn-delete"><i class="fa fa-trash"></i></button>
-                ';
+                ->addColumn('kategori_name', function ($row) {
+                    return $row->kategori->name;
+                })
+                ->addColumn('options', function ($row) {
+                    
+                    $waLink = 'https://wa.me/62' . substr($row->whatsapp, 1);
+                    $waButton = '<a href="' . $waLink . '" class="btn btn-sm btn-success"><i class="fab fa-whatsapp"></i></a>';
+                    
+                    return $waButton .'
+                        <a target="_blank" href="' . route('dashboard.surat.cetak_pdf', $row->id) . '" class="btn btn-sm btn-warning"><i class="fa fa-print"></i></a>
+                    ';
                 })
                 ->rawColumns(['options'])
                 ->addIndexColumn()
                 ->make(true);
-
     }
+    
 
     public function cetak_pdf($id)
 {
-    // Cari surat berdasarkan id
     $surat = Surat::findOrFail($id);
     
-    // Ambil kategori surat
     $kategori_surat_id = $surat->kategori_surat;
     $kategori_surat = KategoriSurat::findOrFail($kategori_surat_id);
     
-    // Tentukan nama file template berdasarkan jenis surat
     $viewName = 'dashboard.admin.cetak_surat.' . strtolower(str_replace(' ', '_', $kategori_surat->name));
-    
-    // Periksa apakah template ada
     if (!view()->exists($viewName)) {
         abort(404);
     }
     
-    // Tampilkan template surat langsung di browser
     return view($viewName, compact('surat'));
 }
 

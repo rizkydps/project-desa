@@ -10,6 +10,9 @@ use App\Http\Controllers\PermintaanSuratController;
 use App\Http\Controllers\SuratController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\BeritaController;
+
+use App\Http\Controllers\NomorSuratController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
 
@@ -51,8 +54,14 @@ Route::get('/', function () {
     return view('landing');
 });
 
+Route::get('/berita', function () {
+    return view('landing.berita');
+});
+
 
 Route::get('/pegawai', [PegawaiController::class, 'show'])->name('pegawai');
+
+
 
 
 Route::post('/submit-form', [PengaduanController::class, 'store'])->name('store');
@@ -68,15 +77,20 @@ Route::get('/formulir-sukses', [PengajuanSuratController::class, 'success'])->na
 
 
 
-//Route::middleware('auth')->group(function () {
+Route::group(['prefix' => 'dashboard', 'middleware' => ['auth', 'role:1,2,3,4']], function () {
 
-    Route::prefix('dashboard')->group(function () {
+
+    // Route::prefix('dashboard')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
     Route::resource('/permintaan-surat', PermintaanSuratController::class, ['names' => 'dashboard.permintaan']);
+    Route::get('/permintaan-surats/records', [PermintaanSuratController::class, 'data_table'])->name('dashboard.permintaan.records');
+
     Route::resource('kategori-surat', KategoriSuratController::class);
     Route::resource('/users', UserController::class, ['names' => 'dashboard.users']);
     Route::resource('/pegawai', PegawaiController::class, ['names' => 'dashboard.pegawai']);
-    Route::resource('/buat-berita', BlogController::class, ['names' => 'dashboard.berita']);
+    Route::resource('/nomor_surat', NomorSuratController::class, ['names' => 'dashboard.nomor_surat']);
+
+    Route::resource('/buat-berita', BeritaController::class, ['names' => 'dashboard.berita']);
 
 
 
@@ -97,10 +111,10 @@ Route::get('/formulir-sukses', [PengajuanSuratController::class, 'success'])->na
     // });
     
 
-    });
+    // });
 
 
-//});
+});
 
 
 // Route::get('formulir', function () {

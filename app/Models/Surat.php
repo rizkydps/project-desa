@@ -40,13 +40,14 @@ class Surat extends Model
         'foto_barang',
         'foto_bukti',
         'foto_pengantar',
+        'kategori_surat',
         'status',
     ];
 
     
-    public function kategori_surat()
+    public function kategori()
     {
-        return $this->belongsTo(KategoriSurat::class, 'kategori_surat', 'id');
+        return $this->belongsTo(KategoriSurat::class, 'kategori_surat');
         
     }
     

@@ -17,3 +17,4 @@
 
 <!-- Custom styles for this page -->
 <link href="{{ asset ('admin/vendor/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
+@stack('dashboard_css')

@@ -12,7 +12,7 @@
                                     <h5 class="pbmit-sub-title transform-top transform-delay-1">Selamat Datang di</h5>
                                     <h2 class="pbmit-title transform-bottom transform-delay-2">Layanan Administrasi <br> <strong>Desa Sidomulyo</strong> </h2>
                                     <div class="pbmit-button transform-bottom transform-delay-3">
-                                        <a class="pbmit-btn " href="about-us.html">
+                                        <a class="pbmit-btn" href="">
                                             <span class="pbmit-button-content-wrapper">
                                                 <span class="pbmit-button-icon pbmit-align-icon-right">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="22.76" height="22.76" viewBox="0 0 22.76 22.76">

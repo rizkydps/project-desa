@@ -17,8 +17,7 @@
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <a href="{{ route('buat-berita.create') }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                    class="fas fa-plus fa-sm text-white-50"></i> Tambah Berita</a>
+                                {{--    --}}
 
                                 <table class="table table-bordered mt-3"  width="100%" cellspacing="0">
                                     <thead>
@@ -32,19 +31,7 @@
 
 
 
-                                {{--  <a href="{{ route('kategori-surat.create') }}">Tambah Kategori Surat</a>
-
-                                    <ul>
-                                        @foreach ($kategori_surat as $kategori)
-                                            <li>{{ $kategori->name }}</li>
-                                            <a href="{{ route('kategori-surat.edit', $kategori->id) }}">Edit</a>
-                                            <form action="{{ route('kategori-surat.destroy', $kategori->id) }}" method="POST">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit">Delete</button>
-                                            </form>
-                                        @endforeach
-                                    </ul>  --}}
+                                
                             </div>
                         </div>
                     </div>
@@ -62,7 +49,7 @@
 <script src="{{ asset('admin/vendor/datatables/js/jquery.dataTables.min.js') }}"></script>
 <script src="{{ asset('admin/js/plugins-init/datatables.init.js') }}"></script> 
 
-<script>
+{{-- <script>
     $(function() {
         $('#dataTable').DataTable({
             "processing"    : true,
@@ -83,7 +70,7 @@
         })
     }
     )
-</script>
+</script> --}}
 
 <script type="text/javascript">
     var elems = document.getElementsByClassName('confirmation');

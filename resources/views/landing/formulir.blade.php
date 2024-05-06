@@ -419,7 +419,7 @@
                                         </select>
                                     </div>
                                     <div class="col-md-6">
-                                        <input type="text" class="form-control" placeholder="Umur" name="umur">
+                                        <input type="number" class="form-control" placeholder="Umur" name="umur">
                                     </div>
 
 
@@ -496,11 +496,11 @@
                                         </select>
                                     </div>
                                     <div class="col-md-6">
-                                        <input type="text" class="form-control" placeholder="Berat Badan"
+                                        <input type="number" class="form-control" placeholder="Berat Badan"
                                             name="berat_badan">
                                     </div>
                                     <div class="col-md-6">
-                                        <input type="text" class="form-control" placeholder="Panjang Badan"
+                                        <input type="number" class="form-control" placeholder="Panjang Badan"
                                             name="panjang_badan">
                                     </div>
                                     <div class="col-md-6">
@@ -1243,6 +1243,8 @@
                 });
             });
         }
+
+        
     </script>
     @include('layouts.landing-partial.script')
 

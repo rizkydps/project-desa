@@ -1,87 +1,3 @@
-<div class="form-container" id="form-4">
-    <div class="row ">
-        <div class="col-md-6">
-            <input type="text" class="form-control" placeholder="Nama Lengkap" name="name">
-        </div>
-        <div class="col-md-6">
-            <input type="text" class="form-control" placeholder="NIK" name="nik">
-        </div>
-        <div class="col-md-6">
-            <input type="tel" class="form-control" placeholder="No Whatsapp"
-                name="whatsapp">
-        </div>
-        <div class="col-md-6">
-            <input type="text" class="form-control" placeholder="Tempat Lahir"
-                name="tempat_lahir">
-        </div>
-        <div class="col-md-6">
-            <input type="date"
-                class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date"
-                aria-invalid="false" value="2024-02-23" placeholder="Tanggal Lahir"
-                name="tanggal_lahir">
-        </div>
-        {{--  <div class="col-md-6">
-        <input class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" value="2024-02-23" type="date" name="date-123">
-    </div>  --}}
-    <div class="col-md-6">
-        <select class="form-select form-control" name="jenis_kelamin" aria-label="Default select example">
-            <option disabled selected	>Jenis Kelamin</option>
-            <option value="jenis_kelamin">Laki - Laki</option>
-            <option value="jenis_kelamin">Perempuan</option>
-
-
-            </select>
-        </div>
-        <div class="col-md-6">
-            <input type="text" class="form-control" placeholder="Umur" name="umur">
-        </div>
-
-
-        <div class="col-md-6">
-            <input type="text" class="form-control" placeholder="Pekerjaan"
-                name="pekerjaan">
-        </div>
-
-        <div class="col-md-6">
-            <input type="text" class="form-control" placeholder="Alamat Sekarang"
-                name="alamat">
-        </div>
-        <div class="col-md-6">
-            <input type="date"
-                class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date"
-                aria-invalid="false" value="2024-02-23" placeholder="Tanggal Meninggal"
-                name="tanggal">
-        </div>
-        <div class="col-md-6">
-            <input type="text" class="form-control" placeholder="Tempat Meninggal"
-                name="alamat">
-        </div>
-        <div class="col-md-6">
-            <input type="text" class="form-control" placeholder="Alamat Makam"
-                name="alamat">
-        </div>
-        <div class="col-md-6">
-            <label for="formFile" class="form-label">Upload Foto KTP Almarhum :</label>
-            <input class="" type="file" id="formFile" name="foto_ktp">
-        </div>
-        <div class="col-md-6">
-            <label for="formFile" class="form-label">Upload Foto Pengantar/Keterangan dari
-                Rt/Rw :</label>
-            <input class="" type="file" id="formFile" name="foto_pengantar">
-        </div>
-
-        <div class="col-md-12 mt-4">
-            <button class="pbmit-btn" type="submit">
-                <span class="pbmit-button-text" name="submit">Kirim</span>
-                <span class="pbmit-button-icon-wrapper">
-                    <span class="pbmit-button-icon">
-                        <i class="pbmit-base-icon-black-arrow-1"></i>
-                    </span>
-                </span>
-            </button>
-        </div>
-    </div>
-</div>
 
 
 @extends('layouts.admin-partial.master')
@@ -191,10 +107,6 @@
                         <option value="3" @if($surat->status == 3) selected @endif>Di Tolak</option>
                         <option value="1" @if($surat->status == 1) selected @endif>Di Setujui</option>
                     </select>
-
-
-                    
-                
                     <a href="{{ route('dashboard.permintaan.index') }}" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm"><i
                         class="  fa-sm text-white-50"></i>Kembali</a>
                         <button type="submit" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i

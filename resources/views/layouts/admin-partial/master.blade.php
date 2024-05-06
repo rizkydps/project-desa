@@ -27,9 +27,7 @@
 
             </div>
             <!-- End of Main Content -->
-
            @include('layouts.admin-partial.footer')
-
         </div>
         <!-- End of Content Wrapper -->
 

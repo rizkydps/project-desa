@@ -1,14 +1,13 @@
 @extends('layouts.admin-partial.master')
-
+@push('dashboard_css')
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
+@endpush
 
 @section('content')
 
 <!-- Begin Page Content -->
 <div class="container-fluid">
-
     <!-- Page Heading -->
-
-
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
@@ -27,7 +26,7 @@
                 </div>
             </div>
             <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <table class="table table-bordered" id="suratTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
                             <th>No</th>
@@ -39,71 +38,6 @@
                     </thead>
 
                     <tbody>
-                        @foreach($permintaans as $permintaan)
-                        <tr>
-                            <td>{{ $loop->iteration}}</td>
-                            <td>{{ $permintaan->name}}</td>
-                            <td>
-                                @if($permintaan->kategori_surat == 1)
-                                Surat Keterangan Domisili
-                                @elseif($permintaan->kategori_surat == 2)
-                                Surat Keterangan Pindah
-                                @elseif($permintaan->kategori_surat == 3)
-                                Surat Pengantar Nikah
-                                @elseif($permintaan->kategori_surat == 4)
-                                Surat Keterangan Kematian
-                                @elseif($permintaan->kategori_surat == 5)
-                                Surat Keterangan Kelahiran
-                                @elseif($permintaan->kategori_surat == 6)
-                                Surat Ijin Keramaian
-                                @elseif($permintaan->kategori_surat == 7)
-                                Surat Keterangan Tidak Mampu
-                                @elseif($permintaan->kategori_surat == 8)
-                                Surat Keterangan Usaha
-                                @elseif($permintaan->kategori_surat == 9)
-                                Surat Kehilangan
-                                @elseif($permintaan->kategori_surat == 10)
-                                Surat Keterangan Orang Yang Sama
-                                @elseif($permintaan->kategori_surat == 11)
-                                Surat Rekomendasi
-                                @endif
-                            </td>
-
-
-                            <td><span class="btn btn-success">
-                                    @if($permintaan->status = 1)
-                                    Menunggu Setujui
-                                    @elseif($permintaan->status = 1)
-                                    DiTerima
-                                    @else
-                                    Di Tolak
-                                    @endif
-                                </span></td>
-
-                            <td>
-                                 {{--  {{ route('dashboard.surat.cetak_surat', ['slug' => $permintaan->slug]) }}  --}}
-                                 <a target="_blank" href="{{ route('dashboard.surat.cetak_pdf', ['id' => $permintaan->id]) }}">
-                                    <button type="button" class="btn btn-danger">
-                                        <i class="fas fa-print"></i>
-                                    </button>
-                                </a>
-                                
-                                @php
-                                $wa = '62' . substr($permintaan->whatsapp,1);
-                                $wa = intval($wa);
-
-                                @endphp
-                                <a href="https://wa.me/{{ $wa }}"><button type="button" class="btn btn-success"><i
-                                            class="fab fa-whatsapp"></i></button></a>
-                                
-
-                            </td>
-
-                        </tr>
-                        @endforeach
-
-
-
                     </tbody>
                 </table>
             </div>
@@ -111,7 +45,56 @@
     </div>
 
 </div>
+<input type="hidden" id="surat_data" value="{{ route('dashboard.surat.records')}}">
+@push('dashboardjs')
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+<script>
+$(document).ready(function () {
+    function reloadTable(id){
+        var table = $(id).DataTable();
+        table.cleanData;
+        table.ajax.reload();
+    }
+    $('#suratTable').DataTable({
+        ordering: true,
+        pagination: true,
+        deferRender: true,
+        serverSide: true,
+        responsive: true,
+        processing: true,
+        pageLength: 50,
+        ajax: {
+            'url': $('#surat_data').val(),
+            'data': function (data) {
+                data.kategori_surat = $('#kategori_surat').val();
 
+            }
+        },
+        columns: [
+            { data: 'DT_RowIndex',name: 'DT_RowIndex',orderable: false,searchable: false},
+            { data: 'name', name: 'name'},
+            { data: 'kategori_name', name: 'kategori_name'},
+            { data: 'status', name: 'status', 
+                render : function (status){
+                    if(status == 1){
+                        return 'Di Terima';
+                    }else{
+                        return 'Di Tolak';
+                    }
+                }
+            },
+           
+            { data: 'options',name: 'options', orderable: false, searchable: false }
+        ],
+    });
+   $('#kategori_surat').on('change', function () {
+    reloadTable('#suratTable');
+   })
 
+});
+</script>
+@endpush
 
 @endsection
+

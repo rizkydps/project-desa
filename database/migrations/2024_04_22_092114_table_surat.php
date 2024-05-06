@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('whatsapp');
             $table->string('name')->nullable();
+            $table->string('name')->nullable();
+
             $table->string('nik')->nullable();
             $table->string('tempat_lahir')->nullable();
             $table->string('nomer_surat')->nullable();

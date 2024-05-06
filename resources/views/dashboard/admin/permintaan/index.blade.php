@@ -1,99 +1,89 @@
 @extends('layouts.admin-partial.master')
-
+@push('dashboard_css')
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
+@endpush
 
 @section('content')
 
 <!-- Begin Page Content -->
-                <div class="container-fluid">
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Permintaan Surat</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="suratTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Pemohon</th>
+                            <th>Jenis Surat</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
 
-                    <!-- Page Heading -->
-                   
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 
-                    <!-- DataTales Example -->
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Permintaan Surat</h6>
-                        </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>No</th>
-                                            <th>Nama Pemohon</th>
-                                            <th>Jenis Surat</th>
-                                            <th>Status</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                    
-                                    <tbody>
-                                        @foreach($permintaans as $permintaan)
-                                        <tr>
-                                            <td>{{ $loop->iteration}}</td>
-                                            <td>{{ $permintaan->name}}</td>
-                                            <td>
-                                                @php
-                                                $categories = [
-                                                    1 => 'Surat Keterangan Domisili',
-                                                    2 => 'Surat Keterangan Pindah',
-                                                    3 => 'Surat Pengantar Nikah',
-                                                    4 => 'Surat Keterangan Kematian',
-                                                    5 => 'Surat Keterangan Kelahiran',
-                                                    6 => 'Surat Ijin Keramaian',
-                                                    7 => 'Surat Keterangan Tidak Mampu',
-                                                    8 => 'Surat Keterangan Usaha',
-                                                    9 => 'Surat Kehilangan',
-                                                    10 => 'Surat Keterangan Orang Yang Sama',
-                                                    11 => 'Surat Rekomendasi'
-                                                ];
-                                                @endphp
-                                                {{ $categories[$permintaan->kategori_surat] ?? 'Tidak Di Ketahui' }}
-                                            </td>
-                                            
+</div>
+<input type="hidden" id="surat_data" value="{{ route('dashboard.permintaan.records')}}">
+@push('dashboardjs')
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+<script>
+$(document).ready(function () {
+    function reloadTable(id){
+        var table = $(id).DataTable();
+        table.cleanData;
+        table.ajax.reload();
+    }
+    $('#suratTable').DataTable({
+        ordering: true,
+        pagination: true,
+        deferRender: true,
+        serverSide: true,
+        responsive: true,
+        processing: true,
+        pageLength: 50,
+        ajax: {
+            'url': $('#surat_data').val(),
+            'data': function (data) {
+                data.kategori_surat = $('#kategori_surat').val();
 
-                                            <td>
-                                                @if($permintaan->status == 0)
-                                                <span class="btn btn-warning">
-                                                
-                                                    Menunggu DiSetujui
-                                                </span>
-                                                @else
-                                                <span class="btn btn-danger">
-                                                
-                                                    Ditolak
-                                                </span>
-                                                @endif  
-                                            </td>
-                                                    
-                                                <td>
-                                                    <a class="btn btn-outline-info" href="{{ route('dashboard.permintaan.show', $permintaan->id) }}"><i
-                                                class="fas fa-eye"></i></a>
-                                                @php
-                                                $wa = '62' . substr($permintaan->whatsapp,1);
-                                                $wa = intval($wa);
-                
-                                                @endphp
-                                                <a href="https://wa.me/{{ $wa }}"><button type="button" class="btn btn-success"><i
-                                                            class="fab fa-whatsapp"></i></button></a>
-                                            
-                                            </td>
-                                        </tr>
-                                        @endforeach
-                                        
-                            
-                                        
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
+            }
+        },
+        columns: [
+            { data: 'DT_RowIndex',name: 'DT_RowIndex',orderable: false,searchable: false},
+            { data: 'name', name: 'name'},
+            { data: 'kategori_name', name: 'kategori_name'},
+            { data: 'status', name: 'status', 
+                render : function (status){
+                    if(status == 0){
+                        return 'p';
+                    }else{
+                        return 'Di Tolak';
+                    }
+                }
+            },
+           
+            { data: 'options',name: 'options', orderable: false, searchable: false }
+        ],
+    });
+   $('#kategori_surat').on('change', function () {
+    reloadTable('#suratTable');
+   })
 
-                </div>  
-
-                
-
-               
-                <!-- /.container-fluid -->
+});
+</script>
+@endpush
 
 @endsection
+
