@@ -67,7 +67,7 @@ $(document).ready(function () {
             { data: 'status', name: 'status', 
                 render : function (status){
                     if(status == 0){
-                        return 'p';
+                        return 'Menunggu ';
                     }else{
                         return 'Di Tolak';
                     }

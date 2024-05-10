@@ -20,14 +20,14 @@
                             </span>
                             <ul class="navigation clearfix">
                                 <li class="active">
-                                    <a href="index.html">Home</a>
+                                    <a href="/">Home</a>
                                     
                                 </li>
                                 <li>
                                     <a href="#">Tentang</a>
-                                <li><a href="#">Layanan</a></li>
-                                <li><a href="#">Berita</a></li>
-                                <li><a href="#">Staff Desa</a></li>
+                                <li><a href="{{ route('formulir') }}">Layanan</a></li>
+                                <li><a href="">Berita</a></li>
+                                <li><a href="{{ route('pegawai') }}">Staff Desa</a></li>
                             </ul>
                         </div>
                     </div>
@@ -57,7 +57,7 @@
                 </a>
             </div>
             <div class="pbmit-button-box-second">
-                <a class="pbmit-btn" href="login.html">
+                <a class="pbmit-btn" href="{{ route('login') }}">
                     <span class="pbmit-button-content-wrapper">
                         <span class="pbmit-button-icon pbmit-align-icon-right">
                             <svg xmlns="http://www.w3.org/2000/svg" width="22.76" height="22.76" viewBox="0 0 22.76 22.76">

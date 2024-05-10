@@ -41,13 +41,7 @@ use App\Http\Controllers\Auth\LoginController;
 
 
 
-
-Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
-Route::post('login', [LoginController::class, 'login']);
-Route::post('logout', [LoginController::class, 'logout'])->name('logout');
-
-Route::get('register', [RegisterController::class, 'showRegistrationForm'])->name('register');
-Route::post('register', [RegisterController::class, 'register']);
+Auth::routes();
 
 
 Route::get('/', function () {
@@ -68,6 +62,8 @@ Route::post('/submit-form', [PengaduanController::class, 'store'])->name('store'
 
 
 Route::get('/formulir', [PengajuanSuratController::class, 'index'])->name('formulir');
+Route::get('/formulir2', [PengajuanSuratController::class, 'index'])->name('formulir');
+
 Route::post('/formulir/store', [PengajuanSuratController::class, 'store'])->name('formulir.store');
 // Route::get('/formulir/store', [PengajuanSuratController::class, 'store'])->name('formulir.store');
 

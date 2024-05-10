@@ -38,13 +38,13 @@ return new class extends Migration
             $table->integer('panjang_badan')->nullable();
 
 
-            
+            $table->date('hari_lahir')->nullable();
+
 
             $table->date('tanggal_lahir')->nullable();
             $table->date('tanggal_meninggal')->nullable();
             $table->date('tanggal')->nullable();
             $table->date('tahun_mulai')->nullable();
-            $table->date('hari_lahir')->nullable();
             $table->date('jam_waktu')->nullable();
 
             

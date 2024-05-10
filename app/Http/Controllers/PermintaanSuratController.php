@@ -93,7 +93,7 @@ class PermintaanSuratController extends Controller
 
     public function data_table(Request $request)
     {
-        $query = Surat::with('kategori')->whereIn('status', [0, 3])->orderBy('created_at', 'desc');
+        $query = Surat::with('kategori')->whereIn('status', ['0', '3'])->orderBy('created_at', 'desc');
         $auth_role = Auth::user()->role;
         
         if ($auth_role == 1) {

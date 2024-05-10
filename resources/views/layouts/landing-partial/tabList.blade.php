@@ -11,7 +11,7 @@
                     <div class="row">
                         <ul class="col-md-4">
                             <li>
-                                <a class="pbmit-btnww" href="contact-us.html">
+                                <a class="pbmit-btnww" href="{{ route('formulir') }}#form-1">
                                     <span class="pbmit-button-content-wrapper">
                                         <span class="pbmit-button-text">Surat Keterangan Domisili</span>
                                     </span>
@@ -105,65 +105,7 @@
                     
                     
 
-                    <!-- <div class="pbmit-column-inner">
-                        <div class="row g-0 align-items-center">
-                            
-                            <div class="col-md-12 col-xl-6 pbmit-tab-list">
-                                <h2>We are here to hear and heal your</h2>	
-                                <div>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even. Quis ipsum suspendisse ultrices gravida risus commodo viverra maecenas accumsan lacus vel facilisis.</div>
-                                <ul class="list-group list-group-borderless">
-                                    <li class="list-group-item">
-                                        <span class="pbmit-icon-list-icon">
-                                            <i aria-hidden="true" class="ti-check"></i>
-                                        </span>
-                                        <span class="pbmit-icon-list-text">COVID-19 Assistance</span>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <span class="pbmit-icon-list-icon">
-                                            <i aria-hidden="true" class="ti-check"></i>
-                                        </span>
-                                        <span class="pbmit-icon-list-text">Comprehensive Inpatient</span>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <span class="pbmit-icon-list-icon">
-                                            <i aria-hidden="true" class="ti-check"></i>
-                                        </span>
-                                        <span class="pbmit-icon-list-text">Homeowners Insurance</span>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <span class="pbmit-icon-list-icon">
-                                            <i aria-hidden="true" class="ti-check"></i>
-                                        </span>
-                                        <span class="pbmit-icon-list-text">Medical And Surgical Services</span>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <span class="pbmit-icon-list-icon">
-                                            <i aria-hidden="true" class="ti-check"></i>
-                                        </span>
-                                        <span class="pbmit-icon-list-text">Insurance 101</span>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <span class="pbmit-icon-list-icon">
-                                            <i aria-hidden="true" class="ti-check"></i>
-                                        </span>
-                                        <span class="pbmit-icon-list-text">Specialised Support Service</span>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <span class="pbmit-icon-list-icon">
-                                            <i aria-hidden="true" class="ti-check"></i>
-                                        </span>
-                                        <span class="pbmit-icon-list-text">Resources Overview</span>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <span class="pbmit-icon-list-icon">
-                                            <i aria-hidden="true" class="ti-check"></i>
-                                        </span>
-                                        <span class="pbmit-icon-list-text">Instant Operation & Appointment</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div> -->
+                    
                 </div>
                 
             </div>

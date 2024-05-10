@@ -13,7 +13,7 @@ class PengajuanSuratController extends Controller
     public function index() {
         $kategoriSurat = KategoriSurat::all();
 
-        return view('landing.formulir', compact('kategoriSurat'));
+        return view('landing.formulir2', compact('kategoriSurat'));
 
     }
 

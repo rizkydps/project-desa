@@ -1323,6 +1323,14 @@ body {
 	.appointment_box{
 		margin: 0 0;
 	}
+
+	.formulir_box{
+		margin: 0 0;
+	}
+
+	.select_box{
+		padding: 30px;
+	}
 	/*=== Blog Detail ===*/
 	.single-post .pbmit-title-bar-content-inner{
 		width: 100%;
@@ -1862,6 +1870,17 @@ body {
 	.appointment_box{
 		padding: 30px;
 	}
+
+	.formulir_box{
+		padding: 30px;
+	}
+
+	.select_box{
+		padding: 30px;
+	}
+
+}
+
 	/*=== Faq ===*/
 	.faq-left_box{
 		padding-right: 0;
