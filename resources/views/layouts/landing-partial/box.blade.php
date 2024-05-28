@@ -42,9 +42,9 @@
                         <h5>Alamat Kantor </h5>	
                     </div>
                     <div class="pbmit-text_aditor">
-                        Jalan Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ipsam magni, minima in optio adipisci.
+                        Jalan F75G+96R, Sidomulyo, Kec. Anggana, Kabupaten Kutai Kartanegara, Kalimantan Timur 7538
                     </div>
-                    <a class="pbmit-btn pbmit-btn-outline" href="contact-us.html">
+                    <a class="pbmit-btn pbmit-btn-outline" target="_BLANK" href="https://maps.app.goo.gl/b2bxMor6kgrum5f2A">
                         <span class="pbmit-button-content-wrapper">
                             <span class="pbmit-button-icon pbmit-align-icon-right">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="22.76" height="22.76" viewBox="0 0 22.76 22.76">
@@ -71,7 +71,7 @@
                         <h5>Kontak </h5>	
                     </div>
                     <div class="pbmit-text_aditor">
-                        Emergency Medical Services, more commonly known as EMS, is a system that responds
+                        Hubungi
                     </div>
                     <div class="pbmit-ihbox-style-19">
                         <div class="pbmit-ihbox-box">
@@ -86,7 +86,7 @@
                                 <h4 class="pbmit-element-heading">
                                     Whatsapp
                                 </h4>
-                                <h2 class="pbmit-element-title">1-800-123-4560</h2>
+                                <h2 class="pbmit-element-title">0831-4134-3241</h2>
                             </div>
                         </div>
                     </div>

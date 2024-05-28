@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\KategoriSurat;
 use App\Models\Surat;
+use Validator;
 
 class PengajuanSuratController extends Controller
 {
@@ -18,6 +19,19 @@ class PengajuanSuratController extends Controller
     }
 
     public function store(Request $request) {
+
+        $validator = Validator::make($request->all(), [
+            // other validation rules
+            'captcha' => 'required|captcha',
+        ]);
+    
+        if ($validator->fails()) {
+            return redirect()->back()
+                ->withErrors($validator)
+                ->withInput();
+        }
+
+
         $request->validate([
             'whatsapp' => 'required'
         ]);
@@ -130,6 +144,8 @@ class PengajuanSuratController extends Controller
         return redirect()->route('success.store');
 
     }
+
+
 
     public function success()
     {

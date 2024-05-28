@@ -8,4 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class Berita extends Model
 {
     use HasFactory;
+
+    protected $guarded = [];
+
+    public function categories()
+    {
+        return $this->belongsToMany(Category::class, 'kategori_beritas');
+    }
+
+    public function getImage()
+    {
+        return asset('storage/' . $this->image);
+    }
 }

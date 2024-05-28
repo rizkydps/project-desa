@@ -29,7 +29,7 @@
 			<!-- About Us end --> 
 
 			<!-- Marquee Start --> 
-            <section>
+            {{-- <section>
 				<div class="container-fluid p-0">
 					<div class="swiper-slider marquee">
 						<div class="swiper-wrapper">
@@ -76,7 +76,7 @@
 						</div>
 					</div>
 				</div>
-            </section>
+            </section> --}}
             <!-- Marquee End -->
 
 			
@@ -88,7 +88,7 @@
 			
 			
 			<!-- Blog Start -->
-			@include('layouts.landing-partial.blog')
+			{{-- @include('layouts.landing-partial.blog') --}}
 			<!-- Blog End -->
 
 			<!-- Make An Appointment Start -->
@@ -143,6 +143,12 @@
 		============================================ -->
 	<!-- jQuery JS -->
 	@include('layouts.landing-partial.script')
+	<script>
+		document.getElementById('refresh-captcha').onclick = function() {
+            var captcha = document.getElementById('captcha-img');
+            captcha.src = '{{ captcha_src('math') }}' + '?' + Math.random();
+        }
+	</script>
 
 	</body>
 

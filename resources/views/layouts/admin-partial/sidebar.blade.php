@@ -39,13 +39,8 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('dashboard.permintaan.index')}}">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Permintaan Surat</span></a>
+                    <span>Filter Surat Masuk</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('dashboard.berita.index')}}">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Buat Berita</span></a>
-            </li> 
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -57,7 +52,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('dashboard.surat.index') }}">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Surat</span></a>
+                    <span>Daftar Permintaan Surat</span></a>
             </li>
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">

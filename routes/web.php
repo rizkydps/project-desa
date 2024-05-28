@@ -11,6 +11,7 @@ use App\Http\Controllers\SuratController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\BlogController;
 
 use App\Http\Controllers\NomorSuratController;
 use App\Http\Controllers\Auth\RegisterController;
@@ -54,16 +55,9 @@ Route::get('/berita', function () {
 
 
 Route::get('/pegawai', [PegawaiController::class, 'show'])->name('pegawai');
-
-
-
-
 Route::post('/submit-form', [PengaduanController::class, 'store'])->name('store');
-
-
 Route::get('/formulir', [PengajuanSuratController::class, 'index'])->name('formulir');
 Route::get('/formulir2', [PengajuanSuratController::class, 'index'])->name('formulir');
-
 Route::post('/formulir/store', [PengajuanSuratController::class, 'store'])->name('formulir.store');
 // Route::get('/formulir/store', [PengajuanSuratController::class, 'store'])->name('formulir.store');
 
@@ -87,6 +81,10 @@ Route::group(['prefix' => 'dashboard', 'middleware' => ['auth', 'role:1,2,3,4']]
     Route::resource('/nomor_surat', NomorSuratController::class, ['names' => 'dashboard.nomor_surat']);
 
     Route::resource('/buat-berita', BeritaController::class, ['names' => 'dashboard.berita']);
+    Route::resource('/kategori', KategoriController::class, ['names' => 'dashboard.kategori']);
+
+    Route::resource('blogs', BlogController::class);
+
 
 
 

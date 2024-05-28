@@ -146,6 +146,23 @@
                                         <label for="formFile" class="form-label">Upload Foto KK :</label>
                                         <input class="" type="file" id="formFile" name="foto_kk">
                                     </div>
+                                    
+                                    <div class="row mt-3">
+                                        <div class="col-md-6">
+                                            <label for="captcha"><code>Validasi :</code></label>
+                                            <div>
+                                                <img src="{{ captcha_src('math') }}" alt="captcha" class="captcha-img" id="captcha-img">
+                                                <button type="button" class="btn btn-refresh" id="refresh-captcha">
+                                                    <i class="fas fa-sync-alt"></i>
+                                                </button>                                                
+                                            </div>
+                                            <input type="text" id="captcha" placeholder="Isi Validasi dengan Benar" class="form-control" name="captcha" required>
+                                        </div>
+                            
+                                        @if ($errors->has('captcha'))
+                                            <span class="text-danger">{{ $errors->first('captcha') }}</span>
+                                        @endif
+                                    </div>
 
 
                                     <div class="col-md-12 mt-4">
@@ -1244,8 +1261,14 @@
             });
         }
 
-        
+
+        document.getElementById('refresh-captcha').onclick = function() {
+            var captcha = document.getElementById('captcha-img');
+            captcha.src = '{{ captcha_src('math') }}' + '?' + Math.random();
+        }
     </script>
+    
+    
     @include('layouts.landing-partial.script')
 
 </body>

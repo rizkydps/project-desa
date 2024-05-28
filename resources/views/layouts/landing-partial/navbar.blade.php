@@ -1,5 +1,14 @@
 <div class="container-fluid">
     <div class="pbmit-header-content d-flex justify-content-between align-items-center">
+        <div class="pbmit-logo-menuarea d-flex align-items-center">
+            <div class="site-branding">
+                <h1 class="site-title">
+                    <a href="index.html">
+                        <img class="pbmit-sticky-logo" src="{{ asset ('landing/images/logo-politani-1-black.png') }}" alt="Yoge">
+                    </a>
+                </h1>
+            </div>
+        </div>
         <div class="d-flex justify-content-between align-items-center">
             <div class="site-navigation">
                 <nav class="main-menu navbar-expand-xl navbar-light">
@@ -27,22 +36,14 @@
                                     <a href="#">Tentang</a>
                                 <li><a href="{{ route('formulir') }}">Layanan</a></li>
                                 <li><a href="">Berita</a></li>
-                                <li><a href="{{ route('pegawai') }}">Staff Desa</a></li>
+                                <li><a href="{{ route('pegawai') }}">Perangkat Desa</a></li>
                             </ul>
                         </div>
                     </div>
                 </nav>
             </div>
         </div>
-        <div class="pbmit-logo-menuarea d-flex align-items-center">
-            <div class="site-branding">
-                <h1 class="site-title">
-                    <a href="index.html">
-                        <img class="pbmit-sticky-logo" src="{{ asset ('landing/images/logo-politani-1-black.png') }}" alt="Yoge">
-                    </a>
-                </h1>
-            </div>
-        </div>
+        
         <div class="pbmit-right-box d-flex align-items-center">
             <!-- <div class="pbmit-button-box">
                 <div class="pbmit-header-button">

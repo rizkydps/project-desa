@@ -23,7 +23,8 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Nama Kategori</th>
+                                            <th>Title</th>
+                                            <th>Slug</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -40,23 +41,23 @@
                 <!-- /.container-fluid -->
 
 @endsection
-@push('style')
-<link href="{{ asset('admin/vendor/datatables/css/jquery.dataTables.min.css') }}" rel="stylesheet">
+@push('dashboard_css')
+<link href="{{ asset('backend/vendor/datatables/css/jquery.dataTables.min.css') }}" rel="stylesheet">
 @endpush
 
-@push('script')
+@push('dashboardjs')
 <!-- Chart piety plugin files -->
-<script src="{{ asset('admin/vendor/datatables/js/jquery.dataTables.min.js') }}"></script>
-<script src="{{ asset('admin/js/plugins-init/datatables.init.js') }}"></script> 
+<script src="{{ asset('backend/vendor/datatables/js/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('backend/js/plugins-init/datatables.init.js') }}"></script> 
 
-{{-- <script>
+<script>
     $(function() {
         $('#dataTable').DataTable({
             "processing"    : true,
             "serverSide"    : true,
             "responsive"    : true,
             "autoWidth"     : true,
-            ajax: '{{ route('blog.data') }}',
+            ajax: '{{ route('berita') }}',
             columns: [
                 {data: 'DT_RowIndex', orderable: false, sortable: false},
                 {data: 'name'},
@@ -70,7 +71,7 @@
         })
     }
     )
-</script> --}}
+</script>
 
 <script type="text/javascript">
     var elems = document.getElementsByClassName('confirmation');
@@ -82,8 +83,7 @@
     }
 </script>
 
-<script src="{{ asset('admin/DataTables/datatables.min.js') }}"></script>
-<script src="{{ asset('admin/vendor/datatables/js/jquery.dataTables.min.js') }}"></script>
-<script src="{{ asset('admin/js/plugins-init/datatables.init.js') }}"></script>
+<script src="{{ asset('backend/DataTables/datatables.min.js') }}"></script>
+<script src="{{ asset('backend/vendor/datatables/js/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('backend/js/plugins-init/datatables.init.js') }}"></script>
 @endpush
-

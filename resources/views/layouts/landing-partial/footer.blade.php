@@ -5,7 +5,7 @@
                 <div class="row">
                     <div class="col-md-12 col-xl-4"></div>
                     <div class="col-md-12 col-xl-8 pbmit-footer-right">
-                        <h3 class="pbmit-title">There is Only One Thing In The World I Want <br> And That Is Hospital.</h3>
+                        <h3 class="pbmit-title">Layanan Administrasi Surat <br>  Desa Sidomulyo</h3>
                     </div>
                 </div>
             </div>
@@ -88,7 +88,7 @@
             <div class="pbmit-footer-text-inner">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="pbmit-footer-copyright-text-area"> Copyright © 2024 <a href="#">PBM Infotech</a> </div>
+                        <div class="pbmit-footer-copyright-text-area"> Copyright © 2024 <a href="#">PBL TRPL</a> </div>
                     </div>
                     <div class="col-md-6">
                         <ul class="pbmit-footer-menu">
