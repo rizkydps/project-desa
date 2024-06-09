@@ -33,14 +33,18 @@ class PengajuanSuratController extends Controller
 
 
         $request->validate([
-            'whatsapp' => 'required'
+            'whatsapp' => 'required',
+            'name_pemohon' => 'required'
+
         ]);
+        
         $picture_name_ktp = null;
         $picture_name_kk = null;
         $picture_name_akta = null;
         $picture_name_barang = null;
         $picture_name_bukti = null;
         $picture_name_pengantar = null;
+        $picture_name_istri_ktp = null;
         if($request->foto_ktp) {
 
             $ext = $request->foto_ktp->getClientOriginalExtension();
@@ -94,37 +98,63 @@ class PengajuanSuratController extends Controller
 
             $request->foto_pengantar->move($upload_path, $picture_name_pengantar);
         }
+        if($request->foto_ktp_istri) {
+            $ext = $request->foto_ktp_istri->getClientOriginalExtension();
+
+            $upload_path = public_path('storage/img/surat/ktp/');
+            $picture_name_istri_ktp = 'ktp_istri_'.$request->name.".$ext";
+            $request->foto_ktp_istri->move($upload_path, $picture_name_istri_ktp);
+        }
 
 
         $surat = new Surat();
         //$surat->nomer_surat = $request->nomer_surat;
 
         $surat->whatsapp = $request->whatsapp;
-        $surat->nomer_surat = $request->nomer_surat;
-
+        $surat->name_pemohon = $request->name_pemohon;
+        $surat->nomor_surat = $request->nomor_surat;
         $surat->name = $request->name;
         $surat->nik = $request->nik;
         $surat->tempat_lahir = $request->tempat_lahir;
         $surat->pekerjaan = $request->pekerjaan;
-        $surat->alamat = $request->alamat;
         $surat->jenis_kelamin = $request->jenis_kelamin;
         $surat->warganegara = $request->warganegara;
         $surat->status_pernikahan = $request->status_pernikahan;
-        $surat->agama = $request->agama;
+        $surat->alamat = $request->alamat;
         $surat->no_kk = $request->no_kk;
-        $surat->tujuan_surat = $request->tujuan_surat;
+        $surat->tanggal_lahir = $request->tanggal_lahir;
+        $surat->alamat_tujuan = $request->alamat_tujuan;
         $surat->alasan_pindah = $request->alasan_pindah;
-        $surat->umur = $request->umur;
         $surat->pengikut_pindah = $request->pengikut_pindah;
+        $surat->name_istri = $request->name_istri;
+        $surat->nik_istri = $request->nik_istri;
+        $surat->tempat_lahir_istri = $request->tempat_lahir_istri;
+        $surat->pekerjaan_istri = $request->pekerjaan_istri;
+        $surat->agama_istri = $request->agama_istri;
+        $surat->tanggal_lahir_istri = $request->tanggal_lahir_istri;
+        $surat->umur = $request->umur;
+        $surat->tanggal_meninggal = $request->tanggal_meninggal;
+        $surat->alamat_makam = $request->alamat_makam;
+        $surat->name_anak = $request->name_anak;
         $surat->berat_badan = $request->berat_badan;
         $surat->panjang_badan = $request->panjang_badan;
-        $surat->tanggal_lahir = $request->tanggal_lahir;
-        $surat->tanggal_meninggal = $request->tanggal_meninggal;
-        $surat->tanggal = $request->tanggal;
-        $surat->tahun_mulai = $request->tahun_mulai;
         $surat->hari_lahir = $request->hari_lahir;
-        $surat->jam_waktu = $request->jam_waktu;
-        $surat->slug = $request->slug;
+        $surat->name_kegiatan = $request->name_kegiatan;
+        $surat->tanggal_kegiatan = $request->tanggal_kegiatan;
+        $surat->alamat_kegiatan = $request->alamat_kegiatan;
+        $surat->tahun_mulai = $request->tahun_mulai;
+        $surat->name_usaha = $request->name_usaha;
+        $surat->tujuan_usaha = $request->tujuan_usaha;
+        $surat->name_barang = $request->name_barang;
+        $surat->name2 = $request->name2;
+        $surat->nik2 = $request->nik2;
+        $surat->tempat_lahir2 = $request->tempat_lahir2;
+        $surat->pekerjaan2 = $request->pekerjaan2;
+        $surat->jenis_kelamin2 = $request->jenis_kelamin2;
+        $surat->tanggal_lahir2 = $request->tanggal_lahir2;
+        $surat->alamat2 = $request->alamat2;
+        $surat->tujuan_surat = $request->tujuan_surat;
+        $surat->tanggal = $request->tanggal;
 
         $surat->foto_ktp = $picture_name_ktp; // img
         $surat->foto_kk = $picture_name_kk; // img
@@ -132,6 +162,8 @@ class PengajuanSuratController extends Controller
         $surat->foto_barang = $picture_name_barang; // img
         $surat->foto_bukti = $picture_name_bukti; // img
         $surat->foto_pengantar = $picture_name_pengantar; // img
+        $surat->foto_ktp_istri = $picture_name_istri_ktp;
+
 
         $kategori_surat = $request->kategori_surat;
         $parts = explode('form-', $kategori_surat);

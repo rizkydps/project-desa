@@ -91,7 +91,7 @@
                         <img src="{{ asset('storage/img/surat/ktp/'. $surat->foto_ktp )}}" class="img-fluid"style="width:300px; height:150px;" alt="">
                     </div>
                     <div class="col">
-                        <label for="exampleFormControlInput">Foto Pengantar : </label>
+                        <label for="exampleFormControlInput">Foto Pengantarr : </label>
                         <img src="{{ asset('storage/img/surat/pengantar/'. $surat->foto_pengantar )}}" class="img-fluid"style="width:200px; height:250px;" alt="">
                     </div>
                 </div>
@@ -100,13 +100,21 @@
                 <form action="{{ route('dashboard.permintaan.update', $surat->id) }}" method="POST">
                     @csrf
                     @method('PUT')
-                
-                    <label for="status">Status Surat:</label>
-                    <select class="form-control mb-3" name="status" id="status">
-                        <option selected disabled>Ubah Status Surat :</option>
-                        <option value="3" @if($surat->status == 3) selected @endif>Di Tolak</option>
-                        <option value="1" @if($surat->status == 1) selected @endif>Di Setujui</option>
-                    </select>
+                    <div class="row">
+                        <label for="status">Status Surat:</label>
+                        <select class="form-control mb-3" name="status" id="status">
+                            <option selected disabled>Ubah Status Surat :</option>
+                            <option value="3" @if($surat->status == 3) selected @endif>Di Tolakk</option>
+                            <option value="1" @if($surat->status == 1) selected @endif>Di Setujui</option>
+                        </select>
+                    </div>
+                    
+                    <div class="row">
+                        <label for="nomor_surat">Nomor Surat :</label>
+                        <input type="text" class="form-control"  placeholder="Isi Nomor Surat">
+                    </div>
+
+                    
 
 
                     

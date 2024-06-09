@@ -96,7 +96,7 @@
 <body onload="window.print()">
     <div class="surat-wrapper">
         <header class="header-wrapper">
-            <img style="float: left; margin: 0px 15px 15px 0px;" src="images/kal.png" width="100" />
+            <img style="float: left; margin: 0px 15px 15px 0px;" src="{{ asset('images/logo.png') }}" width="100" />
             <div id="alamat">
                 <div class="head">PEMERINTAH KABUPATEN KUTAI KARTANEGARA</div>
                 <div class="head">KECAMATAN ANGGANA</div>

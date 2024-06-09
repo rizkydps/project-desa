@@ -1,4 +1,4 @@
-<section class="section-xl pbmit-bg-color-global pbmit-extend-animation tab_section">
+<section class="section-xl pbmit-bg-color-global pbmit-extend-animation tab_section" id="layanan">
     <div class="container">
         <div class="pbmit-heading-subheading text-white text-center">
             <h4 class="pbmit-subtitle">Daftar Layanan</h4>

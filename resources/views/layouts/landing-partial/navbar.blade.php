@@ -3,7 +3,7 @@
         <div class="pbmit-logo-menuarea d-flex align-items-center">
             <div class="site-branding">
                 <h1 class="site-title">
-                    <a href="index.html">
+                    <a href="/">
                         <img class="pbmit-sticky-logo" src="{{ asset ('landing/images/logo-politani-1-black.png') }}" alt="Yoge">
                     </a>
                 </h1>
@@ -33,9 +33,9 @@
                                     
                                 </li>
                                 <li>
-                                    <a href="#">Tentang</a>
-                                <li><a href="{{ route('formulir') }}">Layanan</a></li>
-                                <li><a href="">Berita</a></li>
+                                    <a href="/#profil">Profil</a>
+                                <li><a href="/#layanan">Layanan</a></li>
+                                <li><a href="/#aspira">Aspirasi dan Aduan</a></li>
                                 <li><a href="{{ route('pegawai') }}">Perangkat Desa</a></li>
                             </ul>
                         </div>
@@ -57,21 +57,38 @@
                     <i class="pbmit-base-icon-search-1"></i>
                 </a>
             </div>
-            <div class="pbmit-button-box-second">
-                <a class="pbmit-btn" href="{{ route('login') }}">
-                    <span class="pbmit-button-content-wrapper">
-                        <span class="pbmit-button-icon pbmit-align-icon-right">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22.76" height="22.76" viewBox="0 0 22.76 22.76">
-                                <title>black-arrow</title>
-                                <path d="M22.34,1A14.67,14.67,0,0,1,12,5.3,14.6,14.6,0,0,1,6.08,4.06,14.68,14.68,0,0,1,1.59,1" transform="translate(-0.29 -0.29)" fill="none" stroke="#000" stroke-width="2"></path>
-                                <path d="M22.34,1a14.67,14.67,0,0,0,0,20.75" transform="translate(-0.29 -0.29)" fill="none" stroke="#000" stroke-width="2"></path>
-                                <path d="M22.34,1,1,22.34" transform="translate(-0.29 -0.29)" fill="none" stroke="#000" stroke-width="2"></path>
-                            </svg>
-                        </span>
-                        <span class="pbmit-button-text">Login Admin</span>
-                    </span>
-                </a>
-            </div>
+            @if (Auth::check())
+    <a class="pbmit-btn" href="{{ route('dashboard.index') }}">
+        <span class="pbmit-button-content-wrapper">
+            <span class="pbmit-button-icon pbmit-align-icon-right">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22.76" height="22.76" viewBox="0 0 22.76 22.76">
+                    <title>black-arrow</title>
+                    <path d="M22.34,1A14.67,14.67,0,0,1,12,5.3,14.6,14.6,0,0,1,6.08,4.06,14.68,14.68,0,0,1,1.59,1" transform="translate(-0.29 -0.29)" fill="none" stroke="#000" stroke-width="2"></path>
+                    <path d="M22.34,1a14.67,14.67,0,0,0,0,20.75" transform="translate(-0.29 -0.29)" fill="none" stroke="#000" stroke-width="2"></path>
+                    <path d="M22.34,1,1,22.34" transform="translate(-0.29 -0.29)" fill="none" stroke="#000" stroke-width="2"></path>
+                </svg>
+            </span>
+            <span class="pbmit-button-text">Dashboard</span>
+        </span>
+    </a>
+@else
+    <div class="pbmit-button-box-second">
+        <a class="pbmit-btn" href="{{ route('login') }}">
+            <span class="pbmit-button-content-wrapper">
+                <span class="pbmit-button-icon pbmit-align-icon-right">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22.76" height="22.76" viewBox="0 0 22.76 22.76">
+                        <title>black-arrow</title>
+                        <path d="M22.34,1A14.67,14.67,0,0,1,12,5.3,14.6,14.6,0,0,1,6.08,4.06,14.68,14.68,0,0,1,1.59,1" transform="translate(-0.29 -0.29)" fill="none" stroke="#000" stroke-width="2"></path>
+                        <path d="M22.34,1a14.67,14.67,0,0,0,0,20.75" transform="translate(-0.29 -0.29)" fill="none" stroke="#000" stroke-width="2"></path>
+                        <path d="M22.34,1,1,22.34" transform="translate(-0.29 -0.29)" fill="none" stroke="#000" stroke-width="2"></path>
+                    </svg>
+                </span>
+                <span class="pbmit-button-text">Login Admin</span>
+            </span>
+        </a>
+    </div>
+@endif
+
         </div>
     </div>
 </div>

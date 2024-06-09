@@ -84,8 +84,9 @@ $(document).ready(function () {
                     }
                 }
             },
+            
            
-            { data: 'options',name: 'options', orderable: false, searchable: false }
+            { data: 'options',name: 'options', orderable: false, searchable: false },
         ],
     });
    $('#kategori_surat').on('change', function () {

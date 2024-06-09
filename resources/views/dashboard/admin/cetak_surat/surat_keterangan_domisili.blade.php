@@ -2,12 +2,12 @@
 <html>
 <style>
 
-{{--  @media print{
+ @media print{
             @page {
                 margin-top: 30px;
                 margin-bottom: 30px;
             }
-            }  --}}
+            } 
     .surat-wrapper {
         margin: 0 auto;
         max-width: 1240px;
@@ -100,7 +100,7 @@
 <body >
     <div class="surat-wrapper">
         <header class="header-wrapper">
-            <img style="float: left; margin: 0px 15px 15px 0px;" src="images/kal.png" width="100" />
+            <img style="float: left; margin: 0px 15px 15px 0px;" src="{{ asset('images/logo.png') }}" width="100" />
             <div id="alamat">
                 <div class="head">PEMERINTAH KABUPATEN KUTAI KARTANEGARA</div>
                 <div class="head">KECAMATAN ANGGANA</div>
@@ -116,7 +116,7 @@
 
         <div id="details" class="clearfix">
             <div id="lampiran">
-                <div>Nomor : -</div>
+                <div>Nomor : {{ $surat->nomor_surat }}</div>
                 
             </div>
            
@@ -137,38 +137,38 @@
                     <tr>
                         <td>NIK</td>
                         <td>:</td>
-                        <td>1312414124</td>
+                        <td>{{ $surat->nik }}</td>
                     </tr>
                     <tr>
                         <td>Tempat, Tanggal Lahir</td>
                         <td>:</td>
-                        <td>Wasaga, 2-10-2004</td>
+                        <td>{{ $surat->tempat_tanggal_lahir }}, {{ $surat->tanggal_lahir }}</td>
                     </tr>
                     <tr>
                         <td>Jenis Kelamin</td>
                         <td>:</td>
-                        <td>Laki-Laki</td>
+                        <td>{{ $surat->jenis_kelamin }}</td>
                     </tr>
                     
                     <tr>
                         <td>Warganegara/Agama</td>
                         <td>:</td>
-                        <td>WNI/ISLAM</td>
+                        <td>{{ $surat->warganegara }}/{{ $surat->agama }}</td>
                     </tr>
                     <tr>
                         <td>Pekerjaan</td>
                         <td>:</td>
-                        <td></td>
+                        <td>{{ $surat->pekerjaan }}</td>
                     </tr>
                     <tr>
                         <td>Status Pernikahan</td>
                         <td>:</td>
-                        <td>BELUM KAWIN</td>
+                        <td>{{ $surat->statis_pernikahan }}</td>
                     </tr>
                     <tr>
                         <td>Alamat</td>
                         <td>:</td>
-                        <td>Desa Terong Tanah RT.RW. Kecamatan Pasarwajo</td>
+                        <td>{{ $surat->alamat }}</td>
                     </tr>
                 </tbody>
             </table>
@@ -182,9 +182,9 @@
             <div>Demikian Surat Keterangan Domisili ini dikeluarkan kepada yang bersangkutan untuk dipergunakan sebagaimana mestinya.</div>
 <br><br><br>
             <div class="ttd">
-                <p><strong>LURAH PONGGOK</strong></p>
-                <div style="margin-top: 100px;"><strong><u>Rudi</u></strong><br />
-                    Lurah Desa Ponggok<br />
+                <p><strong>Kepala Desa Sidomulyo</strong></p>
+                <div style="margin-top: 100px;"><strong><u>Agus Haryanto</u></strong><br />
+                    Kepala Desa Sidomulyo<br />
                     NIP.</div>
             </div>
 </body>

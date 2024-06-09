@@ -1,4 +1,4 @@
-<section class="about-us-section_two mt-5">
+<section class="about-us-section_two mt-5" id="profil">
     <div class="container">
         <div class="pbmit-sticky-special pbmit-bg-color-white">
             <div class="row">

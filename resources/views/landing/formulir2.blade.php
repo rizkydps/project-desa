@@ -87,7 +87,7 @@
                                         <div class="lite">Data Surat</div>
                                         <div class="col-md-6">
                                             <label class="form-label">Nama Lengkap :</label>
-                                            <input type="text" class="form-control" placeholder="MasukanNama Lengkap" name="name">
+                                            <input type="text" class="form-control" placeholder="Masukan Nama Lengkap" name="name">
                                         </div>
                                         <div class="col-md-6">
                                             <label class="form-label">Nomor Induk Kewarganegaran :</label>
@@ -105,7 +105,7 @@
 
                                             <input type="date"
                                                 class="form-control wpcf7-form-control wpcf7-date wpcf7-validates-as-date"
-                                                aria-invalid="false" value="2024-02-23" placeholder=" MasukanTanggal Lahir"
+                                                aria-invalid="false" value="2024-02-23" placeholder=" Masukan Tanggal Lahir"
                                                 name="tanggal_lahir">
                                         </div>
                                         

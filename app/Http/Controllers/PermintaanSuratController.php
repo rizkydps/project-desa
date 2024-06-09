@@ -83,13 +83,15 @@ class PermintaanSuratController extends Controller
         
         $surat = Surat::findOrFail($id);
         $surat->status = $request->input('status');
+        $surat->nomor_surat = $request->input('nomor_surat'); // Add this line
         $surat->update();
-
+    
         return redirect()->route('dashboard.permintaan.index')->with('success', 'Status surat berhasil diperbarui');
     }
     
     
-
+    
+    
 
     public function data_table(Request $request)
     {

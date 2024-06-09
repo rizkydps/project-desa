@@ -50,33 +50,33 @@
                 </div>
                 <div class="pbmit-footer-widget-col-2 col-md-6 col-lg-3">
                     <div class="widget">
-                        <h2 class="widget-title">Useful Link</h2>
+                        <h2 class="widget-title">Pintasan</h2>
                         <div class="textwidget">
                             <ul>
-                                <li><a href="our-history.html">Company</a></li>
-                                <li><a href="about-us.html">About</a></li>
-                                <li><a href="contact-us.html">Contact</a></li>
+                                <li><a href="/">Layanan</a></li>
+                                <li><a href="/">Aspirasi dan Aduan</a></li>
+                                <li><a href="/">Contact</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="pbmit-footer-widget-col-3 col-md-6 col-lg-3">
                     <div class="widget">
-                        <h2 class="widget-title">Working Time</h2>
+                        <h2 class="widget-title">Jam Kerja</h2>
                         <div class="pbmit-timelist-wrapper">
                             <ul class="pbmit-timelist-list">
-                                <li><span class="pbmit-timelist-li-title">Mon - Fri: 9.00am - 5.00pm</span></li>
-                                <li><span class="pbmit-timelist-li-title">Saturday: 10.00am - 6.00pm</span></li>
-                                <li><span class="pbmit-timelist-li-title">Sunday Closed</span></li>
+                                <li><span class="pbmit-timelist-li-title">Senin - Jumat: 08:00 - 16:00</span></li>
+                                <li><span class="pbmit-timelist-li-title">Sabtu: 08:00 - 12:00</span></li>
+                                <li><span class="pbmit-timelist-li-title">Minggu Libur</span></li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="pbmit-footer-widget-col-4 col-md-6 col-lg-3">
                     <aside class="widget">
-                        <h2 class="widget-title">Our address</h2>
+                        <h2 class="widget-title">Alamat Kantor</h2>
                         <div class="pbmit-contact-widget-line pbmit-contact-widget-address">
-                            Old Westbury 256, New York <br> 11201, United States
+                            Jalan F75G+96R, Sidomulyo, Kec. Anggana,  <br> Kabupaten Kutai Kartanegara, Kalimantan Timur 7538
                         </div>
                     </aside>
                 </div>

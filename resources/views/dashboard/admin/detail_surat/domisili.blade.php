@@ -97,12 +97,21 @@
                     @csrf
                     @method('PUT')
                 
-                    <label for="status">Status Surat:</label>
-                    <select class="form-control mb-3" name="status" id="status">
-                        <option selected disabled>Ubah Status Surat :</option>
-                        <option value="3" @if($surat->status == 3) selected @endif>Di Tolak</option>
-                        <option value="1" @if($surat->status == 1) selected @endif>Di Setujui</option>
-                    </select>
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label for="nomor_surat">Nomor Surat :</label>
+                            <input type="text" class="form-control" name="nomor_surat" placeholder="Isi Nomor Surat" value="{{ $surat->nomor_surat }}">
+                        
+                            <label for="status">Status Surat:</label>
+                            <select class="form-control mb-3" name="status" id="status">
+                                <option selected disabled>Ubah Status Surat :</option>
+                                <option value="3" @if($surat->status == 3) selected @endif>Di Tolak</option>
+                                <option value="1" @if($surat->status == 1) selected @endif>Di Setujui</option>
+                            </select>                       
+                        </div>
+                        
+                        
+                    </div>
 
 
                     
